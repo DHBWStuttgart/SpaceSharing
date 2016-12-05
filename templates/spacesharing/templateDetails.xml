@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.5" type="template">
+	<name>Spacesharing</name>
+	<creationDate>24 Nov 2016</creationDate>
+	<author>SpaceSharing Team</author>
+	<copyright>Copyright © 2016 SpaceSharing Team</copyright>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>Developer 1.0</version>
+	<description><![CDATA[
+		<p>Created by SpaceSharing Team</a></p>
+	]]></description>
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+	
+	<positions>
+        <position>position-7</position>
+		<position>position-3</position>
+        <position>content</position>
+    </positions>
+	
+</extension>
