@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <extension version="2.5" type="file" method="upgrade">
+      <name>de-DE.com_templateck</name>
+      <version>3.0.13</version>
+      <creationDate>August 2013</creationDate>
+      <author>Bernhard Flemming </author>
+      <authorEmail></authorEmail>
+      <authorUrl></authorUrl>
+      <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+      <license>GNU General Public License version 2 or later</license>
+      <description>German translation for Template Creator CK</description>
+      <fileset>
+		<!-- Language files administrator/language/de-DE -->
+		<files folder="admin" target="administrator/language/de-DE">
+			<filename>de-DE.com_templateck.ini</filename>
+			<filename>de-DE.com_templateck.sys.ini</filename>
+		</files>
+		<!-- Language files language/de-DE -->
+		<files folder="site" target="language/de-DE">
+			<filename>de-DE.com_templateck.ini</filename>
+			<filename>de-DE.com_templateck.sys.ini</filename>
+		</files>
+	</fileset>
+</extension>

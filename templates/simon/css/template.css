@@ -1,0 +1,439 @@
+/* ---------------------------------------
+	Standard styles formatting
+	created with Template Creator
+        on http://www.template-creator.com
+-----------------------------------------*/
+
+
+html {
+  height: 101%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body.contentpane {
+  background: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, div.contentheading, .componentheading {
+  padding: 3px 0;
+  margin: 0;
+  line-height: 1.2;
+  font-weight: bold;
+  font-style: normal;
+}
+h1, .componentheading {
+  font-size: 1.75em;
+}
+h2, div.contentheading {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.25em;
+}
+h4 {
+  font-size: 1em;
+}
+
+ul, ol {
+  padding: .75em 0 .75em 0;
+  margin: 0 0 0 35px;
+}
+
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu li {
+    list-style: none;
+}
+
+p {
+  padding: 5px 0;
+}
+
+address {
+  margin: .75em 0;
+  font-style: normal;
+}
+
+a:focus {
+    outline: none;
+}
+
+img {
+  border: none;
+}
+
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+
+form, fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+input, button, select {
+  vertical-align: middle;
+}
+
+.clr {
+	clear : both;
+}
+
+.column.column1 {
+    width: 25%;
+}
+
+.column.column2 {
+    width: 0%;
+}
+
+.column.main {
+    width: 75%;
+}
+
+.column.center {
+    width: 100%;
+}
+
+.noleft .center {
+    width: 100%;
+}
+
+.noleft .column2 {
+    width: 0%;
+}
+
+.noleft .main {
+    width: 100%;
+}
+
+.noright .column.center {
+    width: 100%;
+}
+
+.flexiblemodule, .column, .logobloc {
+    float: left;
+}
+
+
+/* ---------------------------------------
+	specific to images
+-----------------------------------------*/
+
+ul.actions {
+	margin: 0;
+}
+
+ul.actions li a {
+	text-decoration: none;
+}
+.print-icon {
+	list-style: none;
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	padding-left: 20px;
+	background: url(../images/system/printButton.png) left center no-repeat;
+}
+
+.email-icon {
+	list-style: none;
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	padding-left: 20px;
+	background: url(../images/system/emailButton.png) left center no-repeat;
+}
+
+.edit-icon {
+	list-style: none;
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	padding-left: 20px;
+	background: url(../images/system/edit.png) left center no-repeat;
+}
+
+/* ---------------------------------------
+	Custom styling
+-----------------------------------------*/
+
+.container, .container-fluid {
+	margin: 0 auto;
+}
+
+.container {
+	width: 1000px;
+}
+
+.container-fluid {
+	max-width: 1000px;
+}
+
+body {
+	color: #363636;
+	text-align: left;
+	line-height: 20px;
+	font-size: 12px;
+	font-family: Segoe UI, sans-serif;
+}
+
+a {
+	color: #d7391f;
+}
+
+
+a:hover {
+	color: #000000;
+}
+
+h1, div.componentheading {
+	font-size: 22px;
+}
+
+h2, div.contentheading {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+.button, button, button.btn, input.btn, .btn {
+    border: none;
+	background: #eb5926;
+	color: #ffffff;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.button:hover, button:hover, button.btn:hover, input.btn:hover, .btn:hover {
+	background: #d7391f;
+}
+
+.invalid {border: red;}
+                
+input.inputbox, .registration input, .login input, .contact input, .contact textarea,
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border: none;
+	border: #bebebe 1px solid;
+	color: #bebebe;
+	padding: 4px;
+	text-align: left;
+}
+
+input:focus, input.inputbox:focus, .registration input:focus, .login input:focus, .contact input:focus, .contact textarea:focus,
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+	border: #000000 1px solid;
+}
+
+#bannerlogo {
+	width: 30%;
+}
+
+#bannerlogo > div.inner > .bannerlogodesc {
+	color: #a3a3a3;
+	text-align: center;
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+
+#bannerlogo > div.inner {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#bannermodule {
+	width: 30%;
+}
+
+#bannermodule > div.inner {
+	margin: 10px;
+}
+
+#bannermenu {
+	width: 40%;
+}
+
+#bannermenu > div.inner {
+	margin-top: 10px;
+}
+#bannermenu ul.menu, #bannermenu ul.maximenuck {
+            margin: 0;
+            padding: 0;
+}
+
+#bannermenu ul.menu li, #bannermenu ul.maximenuck li  {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	list-style:none;
+}
+
+#bannermenu ul.menu > li > a, #bannermenu ul.menu > li > span.separator,
+#bannermenu ul.maximenuck > li > a, #bannermenu ul.maximenuck > li > span.separator{
+    display:block;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	color: #000000;
+	margin: 2px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	padding: 7px;
+	font-size: 16px;
+}
+
+#bannermenu ul.menu > li:hover > a, #bannermenu ul.menu > li:hover > span.separator,
+#bannermenu ul.maximenuck > li:hover > a, #bannermenu ul.maximenuck > li:hover > span.separator {
+	color: #d7391f;
+}
+
+#bannermenu ul.menu > li.active > a, #bannermenu ul.menu > li.active > span.separator,
+#bannermenu ul.maximenuck > li.active > a, #bannermenu ul.maximenuck > li.active > span.separator {
+	color: #d7391f;
+}
+
+#bannermenu ul.menu li li a, #bannermenu ul.menu li li span.separator,
+#bannermenu ul.maximenuck li li a, #bannermenu ul.maximenuck li li span.separator {
+    display:block;
+	color: #636262;
+	margin: 2px;
+	padding: 5px;
+	font-size: 12px;
+}
+
+#bannermenu ul.menu li li:hover > a, #bannermenu ul.menu li li:hover span.separator,
+#bannermenu ul.maximenuck li li:hover > a, #bannermenu ul.maximenuck li li:hover span.separator {
+	color: #000000;
+}
+
+#bannermenu ul.menu li li.active > a, #bannermenu ul.menu li li.active span.separator,
+#bannermenu ul.maximenuck li li.active > a, #bannermenu ul.maximenuck li li.active span.separator{
+	color: #000000;
+}
+
+/* code pour menu normal */
+#bannermenu ul.menu li ul, #bannermenu ul.menu li:hover ul ul, #bannermenu ul.menu li:hover ul ul ul {
+	position: absolute;
+	left: -999em;
+	z-index: 999;
+        margin: 0;
+        padding: 0;
+	background: #f7f7f7;
+	width: 200px;
+}
+
+
+#bannermenu ul.menu li:hover ul ul, #bannermenu ul.menu li:hover li:hover ul ul, #bannermenu ul.menu li:hover li:hover li:hover ul ul,
+#bannermenu ul.menu li.sfhover ul ul, #bannermenu ul.menu li.sfhover ul.sfhover ul ul, #bannermenu ul.menu li.sfhover ul.sfhover ul.sfhover ul ul {
+	left: -999em;
+}
+
+#bannermenu ul.menu li:hover > ul, #bannermenu ul.menu li:hover ul li:hover > ul, #bannermenu ul.menu li:hover ul li:hover ul li:hover > ul, #bannermenu ul.menu li:hover ul li:hover ul li:hover ul li:hover > ul,
+#bannermenu ul.menu li.sfhover ul, #bannermenu ul.menu li.sfhover ul li.sfhover ul, #bannermenu ul.menu li.sfhover ul li.sfhover ul li.sfhover ul, #bannermenu ul.menu li.sfhover ul li.sfhover ul li.sfhover ul li.sfhover ul {
+	left: auto;
+}
+
+#bannermenu ul.menu li:hover ul li:hover ul {
+	margin-top: -30px;
+	margin-left: 190px;
+}
+
+/* fin code normal */
+
+#bannermenu ul.maximenuCK li ul, #bannermenu ul.maximenuCK li:hover ul ul, #bannermenu ul.maximenuCK li:hover ul ul ul,
+#bannermenu ul.maximenuck li ul, #bannermenu ul.maximenuck li:hover ul ul, #bannermenu ul.maximenuck li:hover ul ul ul {
+	position: static !important;
+	left: auto !important;
+	background: transparent !important;
+	border-radius: 0 !important;
+    border: none !important;
+	-moz-border-radius: 0 !important;
+	-o-border-radius:  0 !important;
+	-webkit-border-radius: 0 !important;
+	width: 100% !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+#bannermenu ul.maximenuCK li ul ul,
+#bannermenu ul.maximenuck li ul ul {
+	margin: 0 !important;
+}
+
+#bannermenu li div.floatCK,
+#bannermenu li div.floatck {
+	background: #f7f7f7;
+	width: 200px;
+}
+
+#bannermenu ul li ul.maximenuCK2,
+#bannermenu ul li ul.maximenuck2 {
+    margin: 0;
+    padding: 0;
+}
+
+#bannermenu ul li div.maximenuCK2,
+#bannermenu ul li div.maximenuck2 {
+    float: left;
+    width: 100%;
+}
+
+#bannermenu ul li.maximenuCK div.floatCK div.floatCK,
+#bannermenu ul li.maximenuck div.floatck div.floatck {
+	margin-top: -30px;
+	margin-left: 190px;
+}
+
+#bannermenu span.descCK,
+#bannermenu span.descck {
+    display: block;
+    line-height: 10px;
+}
+
+#bannermenu ul.menu li li {
+    float: none;
+    display: block;
+}
+
+
+#maincontent > div.inner {
+	margin-top: 10px;
+}
+
+#left > div.inner {
+	margin-right: 10px;
+	padding: 10px;
+}
+
+#left div.moduletable, #left div.module,
+#left div.moduletable_menu, #left div.module_menu {
+	margin-bottom: 15px;
+}
+
+#center > div.inner {
+	padding: 10px;
+}

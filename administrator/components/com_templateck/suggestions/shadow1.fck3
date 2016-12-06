@@ -1,0 +1,2 @@
+{"style":"\n|di||ID| > div.inner {\n\t-webkit-box-shadow: 0 10px 6px -6px #777777;-moz-box-shadow: 0 10px 6px -6px #777777;box-shadow: 0 10px 6px -6px #777777;\n}\n",
+"ckprops0":"class=\"tab_blocstyles ckprops\" fieldslist=\"blocshadowcolor,blocshadowopacity,blocshadowblur,blocshadowspread,blocshadowoffseth,blocshadowoffsetv,blocshadowinset,blocshadowbefore,blocshadowafter\" blocshadowoffseth=\"0\" blocshadowoffsetv=\"10\" blocshadowblur=\"6\" blocshadowspread=\"-6\" blocshadowcolor=\"#777777\" blocshadowbefore=\"\" blocshadowafter=\"\" "}

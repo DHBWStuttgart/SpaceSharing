@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site" method="upgrade">
+	<name>simon</name>
+	<creationDate>23.11.2016</creationDate>
+	<author>Simon</author>
+	<authorEmail>Simon</authorEmail>
+	<authorUrl>Simon</authorUrl>
+	<copyright>Simon</copyright>
+	<license>Simon</license>
+	<version>v1</version>
+	<description>Simon</description>
+
+	<files>
+		<filename>component.php</filename>
+		<filename>css/bootstrap.css</filename>
+		<filename>css/default.css</filename>
+		<filename>css/default_rtl.css</filename>
+		<filename>css/fonts/index.html</filename>
+		<filename>css/index.html</filename>
+		<filename>css/mobile.css</filename>
+		<filename>css/template.css</filename>
+		<filename>css/template_rtl.css</filename>
+		<filename>images/index.html</filename>
+		<filename>images/logo_fake.png</filename>
+		<filename>images/system/edit.png</filename>
+		<filename>images/system/emailButton.png</filename>
+		<filename>images/system/index.html</filename>
+		<filename>images/system/printButton.png</filename>
+		<filename>img/glyphicons-halflings-white.png</filename>
+		<filename>img/glyphicons-halflings.png</filename>
+		<filename>img/index.html</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>simon.tck3</filename>
+	</files>
+	<positions>
+		<position>position-0</position>
+		<position>position-2</position>
+		<position>position-7</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="bannerlogo_spacer" type="spacer" label="-- [ Logo image for bannerlogo ] --" />
+				<field name="bannerlogo_logoimgsrc" type="media" default="templates/simon/images/logo_fake.png" label="Logo image" description="If you want to redirect the page on the logo click" />
+				<field name="bannerlogo_logoheight" type="text" default="53" label="Logo height" description="If you want to redirect the page on the logo click" />
+				<field name="bannerlogo_logowidth" type="text" default="216" label="Logo width" description="If you want to redirect the page on the logo click" />
+				<field name="bannerlogo_logolink" type="text" default="" label="Logo link" description="If you want to redirect the page on the logo click" />
+				<field name="bannerlogo_logotitle" type="text" default="" label="Logo title" description="Choose the alt tag that will be added to the image" />
+				<field name="bannerlogo_logodescription" type="text" default="" label="Logo description" description="Text that will be added under the logo" />
+				<field name="other_spacer" type="spacer" label="-- [ Other options ] --" />
+				<field name="usecsspie" type="radio" default="1" label="Use CSS PIE" description="Launch a script to emulate the CSS3 styles for Internet Explorer" class="btn-group">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field name="useresponsive" type="radio" default="1" label="Use Responsive mode" description="Adapt your template design for mobile resolutions" class="btn-group">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
