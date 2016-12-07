@@ -56,6 +56,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<jdoc:include type="modules" name="position-7" style="none" />
+				<jdoc:include type="modules" name="navigation-right" style="none" />
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -80,8 +81,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 text-center" style="background-color:blue">
-                    <h2>Portfolio</h2>  
-					<p>Text  Text Text Text Text Text Text Text</p>
+                    <jdoc:include type="modules" name="facebook" style="none" />
                 </div>
 				<div class="col-lg-9 text-center" style="background-color:red">
                     <h2><jdoc:include type="modules" name="position-3" style="none" /></h2>
