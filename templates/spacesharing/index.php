@@ -43,7 +43,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="navbar navbar-default navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -60,7 +60,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.container -->
     </nav>
 
     <!-- Header 
