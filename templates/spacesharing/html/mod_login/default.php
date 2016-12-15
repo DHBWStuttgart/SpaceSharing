@@ -93,6 +93,9 @@ JHtml::_('bootstrap.tooltip');
 			</div>
 		</div class="col-md-3">
 		<?php endif; ?>
+		
+		
+		<!-- Angemeldet bleiben -->
 		<!--
 		<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
 		<div id="form-login-remember" class="checkbox">
@@ -100,11 +103,15 @@ JHtml::_('bootstrap.tooltip');
 		</div class="col-md-3">
 		<?php endif; ?> 
 		-->
+		
+		<!-- Button Anmelden -->
 		<div id="form-login-submit" class="col-md-3">
 			<div class="controls">
 				<button type="submit" tabindex="0" name="Submit" class="btn btn-primary"><?php echo JText::_('JLOGIN') ?></button>
 			</div>
 		</div class="col-md-3">
+		
+		
 		<!--Angemeldet bleiben und Passwort vergessen-->
 		<?php
 			$usersConfig = JComponentHelper::getParams('com_users'); ?>

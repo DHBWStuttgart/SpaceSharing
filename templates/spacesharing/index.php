@@ -1,6 +1,7 @@
 <?php
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
+$logo           = $this->params->get('logo');
 ?>
 <!doctype html>
 <html lang="de">
@@ -39,36 +40,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 </head>
 
 
-<!-- obere Zeile -->
-<body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4" style="background-color:green">
-				<div class="navbar-header page-scroll col-md-3">
-					<a class="navbar-logo" href="#">SpaceSharing</a>
-				</div>
-			</div>           
-            <div class="col-md-4" style="background-color:blue">
-            </div>			
-			<div class="col-md-4" style="background-color:red">
-				<jdoc:include type="modules" name="login" style="none" />
-            </div>
-        </div>
-	</div>
-		
-		
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-custom">
-        <div class="container" class="row">
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<jdoc:include type="modules" name="1-7" style="none" />	
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
     <!-- Header 
     <header>
         <div class="container">
@@ -82,15 +53,77 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         </div>
     </header> -->
 
+<body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
+
+<!-- Navigation -->
+	<nav id="mainNav" class="navbar navbar-custom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3" style="background-color:red">
+					
+					<!-- Bild lokal eingebunden
+					<div class="navbar-logo">
+						<img src="images/2014-04-23_RL_Logo_final.jpg" width="200" height="120"/>
+					</div>
+					-->
+					
+					<div class="logoheader">
+						<h1 id="logo">
+						<?php if ($logo) : ?>
+							<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
+						<?php endif;?>
+						<?php if (!$logo AND $this->params->get('sitetitle')) : ?>
+							<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>
+						<?php elseif (!$logo AND $config->get('sitename')) : ?>
+							<?php echo htmlspecialchars($config->get('sitename')); ?>
+						<?php endif; ?>
+						<span class="header1">
+						<?php echo htmlspecialchars($this->params->get('sitedescription')); ?>
+						</span></h1>
+					</div>
+					<!-- end logoheader -->
+			
+				</div>           
+				<div class="col-md-4" style="background-color:yellow">
+					Letze Buchungen
+					<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					</ul>
+				</div>
+				
+				<div class="col-md-4 col-md-offset-1" style="background-color:red">
+					<jdoc:include type="modules" name="login" style="none"/>
+				</div>
+			</div>
+		</div>
+	</nav>
+		
+		
+    <!-- Navigation alt  -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom">
+        <div class="container" class="row">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<jdoc:include type="modules" name="1-7" style="none" />	
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+	</nav>
+
+
     <!-- Main Menu-->
     <section id="main">
         <div class="container">
             <div class="row">
+				<!-- linkes Menu -->
                 <div class="col-lg-3 text-center" style="background-color:blue">
                     <jdoc:include type="modules" name="menu" style="none"/>
 					<jdoc:include type="modules" name="facebook" style="none"/>
-					
                 </div>
+				<!-- roter Bereich -->
 				<div class="col-lg-9 text-center" style="background-color:red">
                     <h2><jdoc:include type="modules" name="position-3" style="none"/></h2>
 						<jdoc:include type="component"/>

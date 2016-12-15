@@ -27,4 +27,18 @@
         <position>content</position>
     </positions>
 	
+		<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				
+
+				<field name="logo" type="media"
+					label="SpaceSharing Logo" description="Logo auswählen" />
+
+				
+
+			</fieldset>
+		</fields>
+	</config>
+
 </extension>

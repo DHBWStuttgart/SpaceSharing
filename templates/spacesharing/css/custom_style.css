@@ -131,12 +131,9 @@ header .intro-text  {
   }
 }
 
-
-
 section {
   padding: 25px 0;
 }
-
 
 @media (max-width: 767px) {
   section {
