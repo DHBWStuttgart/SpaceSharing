@@ -3,6 +3,7 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
 $logo           = $this->params->get('logo');
 ?>
+
 <!doctype html>
 <html lang="de">
 
@@ -51,6 +52,7 @@ $logo           = $this->params->get('logo');
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     </header> -->
 
 <body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
@@ -71,6 +73,12 @@ $logo           = $this->params->get('logo');
 						<h1 id="logo">
 						<?php if ($logo) : ?>
 							<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
+=======
+		<div class="logoheader">
+						<h1 id="logo">
+						<?php if ($logo) : ?>
+							<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" />
+>>>>>>> origin/master
 						<?php endif;?>
 						<?php if (!$logo AND $this->params->get('sitetitle')) : ?>
 							<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>
@@ -80,6 +88,7 @@ $logo           = $this->params->get('logo');
 						<span class="header1">
 						<?php echo htmlspecialchars($this->params->get('sitedescription')); ?>
 						</span></h1>
+<<<<<<< HEAD
 					</div>
 					<!-- end logoheader -->
 			
@@ -99,6 +108,10 @@ $logo           = $this->params->get('logo');
 			</div>
 		</div>
 	</nav>
+=======
+					</div><!-- end logoheader -->
+	</div>
+>>>>>>> origin/master
 		
 		
     <!-- Navigation alt  -->
