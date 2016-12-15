@@ -1,7 +1,9 @@
 <?php
 
 defined( '_JEXEC' ) or die( 'Restricted access' );
+$logo           = $this->params->get('logo');
 ?>
+
 <!doctype html>
 <html lang="de">
 
@@ -54,6 +56,20 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				<jdoc:include type="modules" name="login" style="none" />
             </div>
         </div>
+		<div class="logoheader">
+						<h1 id="logo">
+						<?php if ($logo) : ?>
+							<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" />
+						<?php endif;?>
+						<?php if (!$logo AND $this->params->get('sitetitle')) : ?>
+							<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>
+						<?php elseif (!$logo AND $config->get('sitename')) : ?>
+							<?php echo htmlspecialchars($config->get('sitename')); ?>
+						<?php endif; ?>
+						<span class="header1">
+						<?php echo htmlspecialchars($this->params->get('sitedescription')); ?>
+						</span></h1>
+					</div><!-- end logoheader -->
 	</div>
 		
 		
