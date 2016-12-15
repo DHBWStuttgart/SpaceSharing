@@ -26,13 +26,8 @@
 		<position>position-3</position>
         <position>content</position>
     </positions>
-	
-<<<<<<< HEAD
-		<config>
-=======
-	
+
 	<config>
->>>>>>> origin/master
 		<fields name="params">
 			<fieldset name="advanced">
 				
@@ -45,11 +40,5 @@
 			</fieldset>
 		</fields>
 	</config>
-<<<<<<< HEAD
 
-=======
-	
-	
-	
->>>>>>> origin/master
 </extension>
