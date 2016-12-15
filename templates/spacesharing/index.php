@@ -39,28 +39,34 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 </head>
 
 
-
+<!-- obere Zeile -->
 <body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
-
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4" style="background-color:green">
+				<div class="navbar-header page-scroll col-md-3">
+					<a class="navbar-logo" href="#">SpaceSharing</a>
+				</div>
+			</div>           
+            <div class="col-md-4" style="background-color:blue">
+            </div>			
+			<div class="col-md-4" style="background-color:red">
+				<jdoc:include type="modules" name="login" style="none" />
+            </div>
+        </div>
+	</div>
+		
+		
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-logo" href="#">SpaceSharing</a>
-            </div>
-
+        <div class="container" class="row">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<jdoc:include type="modules" name="position-7" style="none" />
-				<jdoc:include type="modules" name="navigation-right" style="none" />
+				<jdoc:include type="modules" name="1-7" style="none" />	
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header 
@@ -76,17 +82,19 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
         </div>
     </header> -->
 
-    <!-- Main -->
+    <!-- Main Menu-->
     <section id="main">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 text-center" style="background-color:blue">
-                    <jdoc:include type="modules" name="facebook" style="none" />
+                    <jdoc:include type="modules" name="menu" style="none"/>
+					<jdoc:include type="modules" name="facebook" style="none"/>
+					
                 </div>
 				<div class="col-lg-9 text-center" style="background-color:red">
-                    <h2><jdoc:include type="modules" name="position-3" style="none" /></h2>
-					<jdoc:include type="component" />
-					<p><jdoc:include type="modules" name="content" style="none" /></p>
+                    <h2><jdoc:include type="modules" name="position-3" style="none"/></h2>
+						<jdoc:include type="component"/>
+					<p><jdoc:include type="modules" name="content" style="none"/></p>
                 </div>
             </div>
             
