@@ -13,21 +13,6 @@ $logo      		= $this->params->get('logo');
 
 <?php include 'includes/head.php'; ?> 
 
-
-    <!-- Header 
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">                    
-                    <div class="intro-text">
-                        <span class="name">Start SpaceSharing</span>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-<<<<<<< HEAD
-    </header> -->
-
 <body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
 
 <div class="header">
