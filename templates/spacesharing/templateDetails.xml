@@ -14,17 +14,28 @@
 	<files>
 		<folder>css</folder>
 		<folder>html</folder>
+		<folder>includes</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 	
 	<positions>
-        <position>position-7</position>
-		<position>menu</position>
-		 <position>facebook</position>
-		 <position>login</position>		 
-		<position>position-3</position>
-        <position>content</position>
+		<position>mainmenu</position>
+		<position>roomsearch</position>
+		<position>roomsearch_2</position>
+		<position>map</position>
+		<position>map_2</position>
+		<position>ContentTop1</position>
+		<position>ContentBottom1</position>
+		<position>ContentTop2</position>
+		<position>ContentBottom2</position>
+		<position>Footer1</position>
+		<position>Footer2</position>
+		<position>Footer3</position>
+		<position>Footer4</position>
+		<position>footer_left</position>
+		<position>footer_right</position>
+		<position>debug</position>	        
     </positions>
 
 	<config>

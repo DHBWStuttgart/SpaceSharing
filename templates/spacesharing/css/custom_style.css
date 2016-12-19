@@ -1,4 +1,6 @@
 
+
+
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
@@ -23,9 +25,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 header {
-  text-align: center;
-  background: #18BC9C;
-  color: white;
+  background:none repeat scroll 0% 0% #333;
+  border-bottom:1px solid #EAEAEA;
+  padding:10px 0 0;
+  margin:0 0 30px 0;
+  width:100%;
 }
 header .container {
   padding-top: 50px;
@@ -157,4 +161,34 @@ footer .footer-col {
 footer .footer-below {
   padding: 25px 0;
   background-color: #233140;
+}
+
+
+
+.test1 {
+	background-color: red !important;
+	min-height: 125px !important;
+}
+
+.test2 {
+	background-color: blue !important;
+	min-height: 125px !important;
+}
+
+.test3 {
+	background-color: green !important;
+	min-height: 125px !important;
+}
+
+.test4 {
+	background-color: yellow !important;
+	min-height: 125px !important;
+}
+
+#footer {
+  background:none repeat scroll 0% 0% #333;
+  border-top:1px solid #EAEAEA;
+  padding:10px 0;
+  margin:40px 0 0 0;
+  width:100%;
 }
