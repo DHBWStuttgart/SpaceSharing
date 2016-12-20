@@ -13,7 +13,7 @@ $logo      		= $this->params->get('logo');
 
 <?php include 'includes/head.php'; ?> 
 
-<body id="page-top" class="index <?php if($pageclass): echo $pageclass; endif;?>">
+<body id="page-top" class="index ">
 
 <div class="header">
 		<div id="header" class="container">
