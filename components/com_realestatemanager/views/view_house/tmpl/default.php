@@ -749,7 +749,12 @@ if ($realestatemanager_configuration['extra9'] == 1 && $house->extra9 > 0) {
                     <span class="col_text_1"><?php echo _REALESTATE_MANAGER_LABEL_BATHROOMS; ?>:</span>
                     <span class="col_text_2"><?php echo $house->bathrooms; ?></span>
                 </div>
-        
+            <?php } if (isset($house->bedrooms) && trim($house->bedrooms)) { ?>
+                <div class="row_text">
+                    <i class="fa fa-inbox"></i>
+                    <span class="col_text_1"><?php echo _REALESTATE_MANAGER_LABEL_BEDROOMS; ?>:</span>
+                    <span class="col_text_2"><?php echo $house->bedrooms; ?></span>
+                </div>
                         <?php
                     }
             ?>

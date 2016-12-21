@@ -92,6 +92,8 @@ class mosRealEstateManager extends JTable {
     /** @var int */
     var $bathrooms = null;
 
+    /** @var int */
+    var $bedrooms = null;
 
     /** @var varchar(200) */
     var $contacts = null;
@@ -420,7 +422,9 @@ class mosRealEstateManager extends JTable {
         $bathrooms = $xmlDoc->createElement("bathrooms");
         $bathrooms->appendChild($xmlDoc->createTextNode($this->bathrooms));
         $retVal->appendChild($bathrooms);
-        
+        $bedrooms = $xmlDoc->createElement("bedrooms");
+        $bedrooms->appendChild($xmlDoc->createTextNode($this->bedrooms));
+        $retVal->appendChild($bedrooms);
         $image_link = $xmlDoc->createElement("image_link");
         $image_link->appendChild($xmlDoc->createCDATASection($this->image_link));
         $retVal->appendChild($image_link);
@@ -571,7 +575,7 @@ class mosRealEstateManager extends JTable {
         $retVal.= "<map_zoom>" . $this->map_zoom . "</map_zoom>\n";
         $retVal.= "<rooms>" . $this->rooms . "</rooms>\n";
         $retVal.= "<bathrooms>" . $this->bathrooms . "</bathrooms>\n";
-
+        $retVal.= "<bedrooms>" . $this->bedrooms . "</bedrooms>\n";
         $retVal.= "<contacts>" . $this->contacts . "</contacts>\n"; //<contacts>
         $retVal.= "<image_link><![CDATA[" . $this->image_link . "]]></image_link>\n";
         $retVal.= "<listing_status>" . $this->listing_status . "</listing_status>\n";

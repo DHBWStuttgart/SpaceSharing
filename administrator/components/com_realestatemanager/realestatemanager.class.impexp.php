@@ -115,6 +115,7 @@ class mosRealEstateManagerImportExport {
                 $house->hlongitude = $line[14];
                 $house->map_zoom = $line[15];
                 $house->bathrooms = $line[16];
+                $house->bedrooms = $line[17];
                 $house->contacts = $line[19];
                 $house->image_link = $line[20];
                 $house->listing_status = $line[21];
@@ -481,6 +482,8 @@ class mosRealEstateManagerImportExport {
             $house_map_zoom = $house_class->map_zoom = mosRealEstateManagerImportExport::getXMLItemValue($house, 'map_zoom');
             //get bathrooms
             $house_class->bathrooms = mosRealEstateManagerImportExport::getXMLItemValue($house, 'bathrooms');
+            //get bedrooms
+            $house_class->bedrooms = mosRealEstateManagerImportExport::getXMLItemValue($house, 'bedrooms');
             //get rooms
             $house_class->rooms = mosRealEstateManagerImportExport::getXMLItemValue($house, 'rooms');
             //get contacts
@@ -1122,7 +1125,8 @@ static function exportHouses($option) {
             $tmp->lot_size = str_replace($order, ' ', $tmp->lot_size); 
             $tmp->bathrooms = str_replace('|', '-', $tmp->bathrooms);
             $tmp->bathrooms = str_replace($order, ' ', $tmp->bathrooms); 
-           
+            $tmp->bedrooms = str_replace('|', '-', $tmp->bedrooms);
+            $tmp->bedrooms = str_replace($order, ' ', $tmp->bedrooms); 
             $tmp->year = str_replace('|', '-', $tmp->year);
             $tmp->year = str_replace($order, ' ', $tmp->year); 
             $tmp->house_size = str_replace('|', '-', $tmp->house_size);

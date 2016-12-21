@@ -118,7 +118,7 @@ if($layout == "") $layout = "default";
     <input type="hidden" name="Zipcode" value="on" />
     <input type="hidden" name="ownername" value="on" />
     <input type="hidden" name="Bathrooms" value="on" />
-  
+    <input type="hidden" name="Bedrooms" value="on" />
     <input type="hidden" name="Contacts" value="on" />
     <input type="hidden" name="Agent" value="on" />
     <input type="hidden" name="Lot_size" value="on" />

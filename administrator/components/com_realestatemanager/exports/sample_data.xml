@@ -231,7 +231,7 @@
 <map_zoom>14</map_zoom>
 <rooms>6</rooms>
 <bathrooms>2</bathrooms>
-
+<bedrooms>4</bedrooms>
 <contacts></contacts>
 <image_link><![CDATA[7D30FC3F-ECBB-6C5B-DAE2-133A1182F12C_5.jpg]]></image_link>
 <listing_status>Active</listing_status>
@@ -341,7 +341,7 @@
 <map_zoom>14</map_zoom>
 <rooms>8</rooms>
 <bathrooms>3</bathrooms>
-
+<bedrooms>4</bedrooms>
 <contacts></contacts>
 <image_link><![CDATA[CA80ECE7-AA10-0DE1-08C9-A22FA9AB9E8B_6.jpg]]></image_link>
 <listing_status>Active</listing_status>
@@ -454,7 +454,7 @@
 <map_zoom>14</map_zoom>
 <rooms>9</rooms>
 <bathrooms>2</bathrooms>
-
+<bedrooms>5</bedrooms>
 <contacts></contacts>
 <image_link><![CDATA[C6365E27-99F9-68C9-4331-28206D00C921_4.jpg]]></image_link>
 <listing_status>Active</listing_status>

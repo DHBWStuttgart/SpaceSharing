@@ -35,6 +35,7 @@ if ($task == 'search') {
     $checkbox['ownername'] = $jinput->get('ownername') == 'on' ? $check : '';
     $checkbox['rooms'] = $jinput->get('rooms') == 'on' ? $check : '';
     $checkbox['Bathrooms'] = $jinput->get('Bathrooms') == 'on' ? $check : '';
+    $checkbox['Bedrooms'] = $jinput->get('Bedrooms') == 'on' ? $check : '';
     $checkbox['Garages'] = $jinput->get('Garages') == 'on' ? $check : '';
     $checkbox['year'] = $jinput->get('year') == 'on' ? $check : '';
     $checkbox['Contacts'] = $jinput->get('Contacts') == 'on' ? $check : '';
@@ -323,7 +324,17 @@ if($view == "") $view = "alone_category";
                 </label>
             </div>
 
-           
+            <div class="col_box_3">
+                <label>
+                    <span><?php echo _REALESTATE_MANAGER_LABEL_BEDROOMS; ?></span>
+                    <?php if ($task == 'search') { ?>                    
+                    <input type="checkbox" name="Bedrooms" id="Bedrooms" <?php echo $checkbox["Bedrooms"] ?>/>
+                    <?php } else { ?>                                        
+                    <input type="checkbox" name="Bedrooms" id="Bedrooms" checked="checked" />
+                    <?php } ?>                    
+                </label>
+            </div>
+
             <div class="col_box_3">
                 <label>
                     <span><?php echo _REALESTATE_MANAGER_LABEL_GARAGES; ?></span>

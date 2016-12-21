@@ -1573,7 +1573,14 @@ class HTML_realestatemanager {
                         document.getElementById('rooms').style.borderColor = "#FF0000";
                         document.getElementById('rooms').style.color = "#FF0000";
                         return;
-                    }  else if (form.year.value == ''){
+                    } else if (form.bedrooms.value == '' || !isValidNumber(form.bedrooms.value)){
+                        window.scrollTo(0,findPosY(document.getElementById('rooms_alert')));
+                        document.getElementById('bedrooms').placeholder = "<?php
+                         echo _REALESTATE_MANAGER_INFOTEXT_JS_BEDROOMS; ?>";
+                        document.getElementById('bedrooms').style.borderColor = "#FF0000";
+                        document.getElementById('bedrooms').style.color = "#FF0000";
+                        return;
+                    } else if (form.year.value == ''){
                         window.scrollTo(0,findPosY(document.getElementById('rooms_alert')));
                         document.getElementById('alert_year').innerHTML = "<?php
                          echo _REALESTATE_MANAGER_INFOTEXT_JS_BUILD_YEAR; ?>";
@@ -1849,7 +1856,14 @@ class HTML_realestatemanager {
         <div id="rem_house_titlebox">
             <?php echo _REALESTATE_MANAGER_LABEL_PRICING; ?>
         </div>
-        
+        <div class="row_add_house">
+            <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_TYPE; ?>:</span>
+            <div class="rem_house_input"><?php echo $listing_type_list; ?></div>
+        </div>
+        <div class="row_add_house"> 
+            <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_STATUS; ?>:</span>
+            <div class="rem_house_input"><?php echo $listing_status_list; ?></div>
+        </div>
         <div class="row_add_house"> 
             <span><?php echo _REALESTATE_MANAGER_LABEL_PRICE; ?>:*</span>
             <div class="rem_house_input">
@@ -2258,7 +2272,11 @@ class HTML_realestatemanager {
             <div class="rem_house_input"><input class="inputbox" type="text" id="bathrooms"
              name="bathrooms" size="10" value="<?php echo $row->bathrooms; ?>" /></div>
         </div>
-        
+        <div class="row_add_house">
+            <span><?php echo _REALESTATE_MANAGER_LABEL_BEDROOMS; ?>:*</span>
+            <div class="rem_house_input"><input class="inputbox" type="text" id="bedrooms"
+             name="bedrooms" size="10" value="<?php echo $row->bedrooms; ?>" /></div>
+        </div>
         <div class="row_add_house">
             <span><?php echo _REALESTATE_MANAGER_LABEL_GARAGES; ?>:</span>
             <div class="rem_house_input"><input class="inputbox" type="text" id="garages"
@@ -2294,7 +2312,31 @@ class HTML_realestatemanager {
                 $year = date("Y", mktime(0, 0, 0, date('m'), 1, date('Y')));
                 ?>
         </div>
-           
+            <?php
+    if ($realestatemanager_configuration['edocs']['allow']) {
+        ?>  
+        <div class="row_add_house">
+            <div id="alert_edoc"></div>
+            <span><?php echo _REALESTATE_MANAGER_LABEL_EDOCUMENT_UPLOAD; ?>:</span>
+            <div class="rem_house_input"><input class="inputbox" type="file" id="edoc_file"
+             name="edoc_file" value="" size="50" maxlength="250"
+              onClick="document.adminForm.edok_link.value ='';"/></div>
+        </div>
+        <div class="row_add_house">
+            <span><?php echo _REALESTATE_MANAGER_LABEL_EDOCUMENT_UPLOAD_URL; ?>:</span>
+            <div class="rem_house_input"><input class="inputbox" type="text" name="edok_link"
+             value="<?php echo $row->edok_link; ?>" size="50" maxlength="250"/></div>
+        </div>
+                <?php
+                }
+    if (strlen($row->edok_link) > 0 and !$row->id_true) {
+                    ?>
+        <div class="row_add_house">
+            <span><?php echo _REALESTATE_MANAGER_LABEL_EDOCUMENT_DELETE; ?>:</span>
+            <div class="rem_house_input"><?php echo $delete_edoc; ?></div>
+        </div>
+        <?php
+    } ?>
     <table>
     <?php
 ///////////////////////////////START edd video and track\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -2546,10 +2588,24 @@ class HTML_realestatemanager {
                         </div>
                     <?php } ?>
     </div>
-            <?php } ?>      
-   
-   </br>
-   </br>
+            <?php } ?>
+    <div id="alert_advertisment"></div>
+    <div class="rem_house_contacts">
+        <div id="rem_house_titlebox">
+            <?php echo _REALESTATE_MANAGER_HEADER_ADVERTISMENT; ?>
+        </div>
+            <div class="row_add_house">
+                    <span><?php echo _REALESTATE_MANAGER_LABEL_FEATURED_CLICKS; ?>:</span>
+                    <div class="rem_house_input"><input class="inputbox" type="text" id="featured_clicks"
+                     name="featured_clicks" size="30" value="<?php echo $row->featured_clicks; ?>" /></div>
+            </div>
+            <div class="row_add_house">
+                    <span><?php echo _REALESTATE_MANAGER_LABEL_FEATURED_SHOWS; ?>:</span>
+                    <div class="rem_house_input"><input class="inputbox" type="text" id="featured_shows"
+                     name="featured_shows" size="30" value="<?php echo $row->featured_shows; ?>" /></div>
+            </div>
+    </div>
+
     <div class="rem_house_contacts">
         <div id="rem_house_titlebox">
             <?php echo _REALESTATE_MANAGER_LABEL_AGENT_INFO; ?>

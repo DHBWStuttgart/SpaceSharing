@@ -1871,6 +1871,7 @@ class PHP_realestatemanager {
         $Extra10 = " ";
         $Rooms = " ";
         $Bathrooms = " ";
+        $Bedrooms = " ";
         $Contacts = " ";
         $Agent = " ";
         $House_size = " ";
@@ -2024,6 +2025,13 @@ class PHP_realestatemanager {
                     $Bathrooms = " or ";
                 $is_add_or = true;
                 $Bathrooms .= "LOWER(b.bathrooms) LIKE '$exactly' ";
+            }
+            if (isset($_REQUEST['Bedrooms']) && $_REQUEST['Bedrooms'] == "on") {
+                $Bedrooms = " ";
+                if ($is_add_or)
+                    $Bedrooms = " or ";
+                $is_add_or = true;
+                $Bedrooms .= "LOWER(b.bedrooms) LIKE '$exactly' ";
             }
 
             if (isset($_REQUEST['Contacts']) && $_REQUEST['Contacts'] == "on") {
@@ -2196,7 +2204,7 @@ class PHP_realestatemanager {
             "  " . $Title . "  " . $Address .
             "  " . $Country . "  " . $Region . "  " . $City . "  " . $Zipcode . "  " . $Extra1 .
             "  " . $Extra2 . "  " . $Extra3 . "  " . $Extra4 . "  " . $Extra5 . "  " . $Rooms .
-            "  " . $Bathrooms . "  " . $Contacts . "  " . $Agent .
+            "  " . $Bathrooms . "  " . $Bedrooms . "  " . $Contacts . "  " . $Agent .
             "  " . $House_size . " " . $Lot_size . " " . $Built_year . "  " . $ownername . "  ))") : (" "));
 
         if (trim($RentSQL) != "")

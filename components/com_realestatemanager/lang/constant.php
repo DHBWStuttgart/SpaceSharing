@@ -405,6 +405,7 @@ $constMas[] = array('const'=>'_REALESTATE_MANAGER_ADMIN_INFOTEXT_JS_EDIT_PRICE',
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_ADMIN_INFOTEXT_JS_EDIT_TITLE', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_INFOTEXT_JS_ROOMS', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_INFOTEXT_JS_BATHROOMS', 'value_const'=>'Realestate Manager');
+$constMas[] = array('const'=>'_REALESTATE_MANAGER_INFOTEXT_JS_BEDROOMS', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_INFOTEXT_JS_BUILD_YEAR', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_INFOTEXT_JS_BUILD_AREA', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_INFOTEXT_JS_BUILD_LOT_SIZE', 'value_const'=>'Realestate Manager');
@@ -416,6 +417,7 @@ $constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_LISTING_TYPE', 'value_co
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_LISTING_STATUS', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_ROOMS', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_BATHROOMS', 'value_const'=>'Realestate Manager');
+$constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_BEDROOMS', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_AGENT', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_CONTACT_AGENT', 'value_const'=>'Realestate Manager');
 $constMas[] = array('const'=>'_REALESTATE_MANAGER_LABEL_AGENT_INFO', 'value_const'=>'Realestate Manager');

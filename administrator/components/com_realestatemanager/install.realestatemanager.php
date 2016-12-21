@@ -1001,6 +1001,7 @@ function com_install2() {
 
               rooms int(11) default '0',
               bathrooms int(11) default '0',
+              bedrooms int(11) default '0',
               contacts varchar(250) default '',
               image_link varchar(200) default '',
               listing_status varchar(45) default '',
