@@ -18,36 +18,61 @@ $logo      		= $this->params->get('logo');
 <div class="header">
 		<div id="header" class="container">
 			<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 test3">
-					    <div id="logo">
-						  <a href="<?php echo $this->params->get('logo_link')?>">								
-							<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
-						</a>
-					    </div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 test3">
+						<jdoc:include type="modules" name="loginarea" style="xhtml" />	
 					</div>
+			</div>
 				<?php if (
 				$this->countModules('loginarea') || 
 				$this->countModules('mainmenu'))
 				: ?>
-				    <div class="main_menu col-lg-8 col-md-8 col-sm-8 col-xs-12 test4">
-						<div class="row">	
+			<div class="row">
+				    <div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test4">
+						<div class="row">							
+							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test4">	
+								
+								<!--Navigation-->
+								<div id="navigation">
+									<div class="container-fluid">
 
-							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test1">
-								<jdoc:include type="modules" name="loginarea" style="xhtml" />							
-							</div>						
-							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test4">					
-								<nav id="site-navigation-main" class="navbar" role="navigation">
+										<div class="navbar navbar-default " role="navigation">
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#targetedestination">
+													<span class="sr-only">Toggle navigation</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
 
-								<div id="main-navbar-collapse" class="collapse navbar-collapse">
-									<jdoc:include type="modules" name="mainmenu" style="xhtml" />
+												<div id="brand">
+													<a href="<?php echo $this->params->get('logo_link') ?>">
+														<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
+													</a>
+												</div>
+											</div>
+
+											<div class="navbar-collapse collapse navbar-right bottom-align-text" id="targetedestination">
+											<?php if ($this->countModules('mainmenu')) : ?>
+												<nav class="navigation" role="navigation">
+												
+													<jdoc:include type="modules" name="mainmenu" style="none" />
+													
+												</nav>
+											<?php endif; ?>
+											</div>
+
+										</div>
+									</div>
 								</div>
-								</nav><!-- #site-navigation -->
+								<!--Navigation-->
+
 							</div>
 						
 						</div>	
 				    </div>
+				</div>
 				<?php endif; ?>
-			</div>
+			
 		
 		
 		</div> 
