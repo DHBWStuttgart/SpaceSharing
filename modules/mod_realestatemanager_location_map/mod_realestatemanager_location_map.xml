@@ -23,7 +23,7 @@
   <config>
     <fields name="params">
       <fieldset name="basic">
-	<field name="map_width" type="text" default="400" label="Width of map (px)" description="The width of your location map (in px)" />
+	<field name="map_width" type="text" default="100" label="Width of map in %" description="The width of your location map (in %)" />
 	<field name="map_height" type="text" default="250" label="Height of map (px)" description="The  height of your location map (in px)" />
 	<field name="menu_map" type="radio" default="1" label="Map Type Menu" description="Show Map Type Menu (Map-Satellite-Hybrid)">
 			<option value="0">Hide</option>

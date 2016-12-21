@@ -25,14 +25,26 @@ $logo      		= $this->params->get('logo');
 						</a>
 					    </div>
 					</div>
-				<?php if ($this->countModules('mainmenu')): ?>
+				<?php if (
+				$this->countModules('loginarea') || 
+				$this->countModules('mainmenu'))
+				: ?>
 				    <div class="main_menu col-lg-8 col-md-8 col-sm-8 col-xs-12 test4">
-						<nav id="site-navigation-main" class="navbar" role="navigation">
+						<div class="row">	
 
-							<div id="main-navbar-collapse" class="collapse navbar-collapse">
-								<jdoc:include type="modules" name="mainmenu" style="xhtml" />
+							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test1">
+								<jdoc:include type="modules" name="loginarea" style="xhtml" />							
+							</div>						
+							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test4">					
+								<nav id="site-navigation-main" class="navbar" role="navigation">
+
+								<div id="main-navbar-collapse" class="collapse navbar-collapse">
+									<jdoc:include type="modules" name="mainmenu" style="xhtml" />
+								</div>
+								</nav><!-- #site-navigation -->
 							</div>
-						</nav><!-- #site-navigation -->
+						
+						</div>	
 				    </div>
 				<?php endif; ?>
 			</div>
@@ -66,23 +78,27 @@ $logo      		= $this->params->get('logo');
 
 	<div id="globalContent">
 
-		<?php if (
+		<?php /* if (
 		$this->countModules('ContentTop1') || 
 		$this->countModules('ContentBottom1') || 
 		$this->countModules('ContentTop2') || 
 		$this->countModules('ContentBottom2'))
-		: ?>
+		: */ ?>
 			<div class="row">
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 test3">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 test3">
 					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />
+					
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+					
 					<jdoc:include type="modules" name="ContentBottom1" style="xhtml" />
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 test4">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 test4">
 					<jdoc:include type="modules" name="ContentTop2" style="xhtml" />
 					<jdoc:include type="modules" name="ContentBottom2" style="xhtml" />
 				</div>
 			</div>
-		<?php endif; ?>
+		<?php //endif; ?>
 
 	</div> <!--globalContent-->
 
