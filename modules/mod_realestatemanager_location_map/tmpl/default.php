@@ -339,7 +339,7 @@ window.addEvent('domready', function() {
   </div>
 <style>#map_canvas<?php echo $pr; ?> img{max-width:none;}</style>
 <div class="re_map_canvas"  id="map_canvas<?php echo $pr; ?>" style=
-      "width: <?php echo $params->get('map_width');?>px; height: <?php echo $params->get('map_height'); ?>px;
+      "width: 100%; height: <?php echo $params->get('map_height'); ?>px;
        float: rigth;" >
 </div>
 <div style="text-align: center;"><a href="http://ordasoft.com" style="font-size: 10px;">Powered by OrdaSoft!</a></div>
