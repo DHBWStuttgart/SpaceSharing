@@ -55,7 +55,7 @@ $logo      		= $this->params->get('logo');
 
 
 <div id="wrapper" class="container">
-
+	
 	<?php if (
 	$this->countModules('roomsearch') || 
 	$this->countModules('roomsearch_2') || 
@@ -74,7 +74,7 @@ $logo      		= $this->params->get('logo');
 	</div>
 	<?php endif; ?>
 	
-	
+
 
 	<div id="globalContent">
 
@@ -86,6 +86,7 @@ $logo      		= $this->params->get('logo');
 		: */ ?>
 			<div class="row">
 				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 test3">
+				<h7> Raumübersicht </h7> 
 					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />
 					
 					<jdoc:include type="message" />
