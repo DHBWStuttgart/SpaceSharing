@@ -195,6 +195,7 @@ if (isset($langContent)){
             $rows= $database->loadObjectList();
 }
 ?>
+<div id="rem_mod_map">
 <div class="rm_map realestatemanager_<?php if($moduleclass_sfx!='') echo $moduleclass_sfx; ?>">
 
 
@@ -342,4 +343,5 @@ window.addEvent('domready', function() {
       "width: <?php echo $params->get('map_width');?>%; height: <?php echo $params->get('map_height'); ?>px;
        float: rigth;" >
 </div>
-<div style="text-align: center;"><a href="http://ordasoft.com" style="font-size: 10px;">Powered by OrdaSoft!</a></div>
+</div>
+<div class="ordasoft" style="text-align: center;"><a href="http://ordasoft.com"  style="font-size: 10px;">Powered by OrdaSoft!</a></div>

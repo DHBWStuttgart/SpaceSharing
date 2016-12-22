@@ -339,7 +339,7 @@ table.adminform td label.radiobtn{
     border: 1px solid #D6D6D6;
     height: 300px;
     width: 100%;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
 }
 .search_map_layout #map_canvas{
     height: 820px;
@@ -424,9 +424,9 @@ color:#a3a3a3;
 .admin_table_47 .blank a,
 input[type="submit"],
 input[type="button"] {
-    color: #fff!important;
+   
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0043cc', GradientType=0)!important;
-    background-color: #F7A900;
+    /* background-color: #F7A900; */
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
     cursor: pointer !important;
     font-size: 15px;
@@ -545,7 +545,7 @@ input[type="checkbox"]:focus {
     padding: 5px;
 }
 .rem_type_catlist {
-    background: #efefef;
+    background: #dfdfdf;
     border: 1px solid #ddd;
     padding: 10px;
     margin-top:10px;
@@ -1127,6 +1127,7 @@ div#country3 {
     padding: 15px;
     overflow: hidden;
     color: #a3a3a3;
+	border-radius: 10px;
 }
 .featured_houses_category, .featured_houses_location {
     margin-bottom: 10px;

@@ -272,7 +272,7 @@ function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Besch
 
     if ($location == 1){
         echo "<div class='featured_list_location'>".
-          "<i class='fa fa-map-marker'></i> {$row->hlocation}&nbsp;</div>";
+          "<i class='glyphicon glyphicon-flag'></i> {$row->hlocation}&nbsp;</div>";
     }
     if ($description == 1){
 		
@@ -357,7 +357,7 @@ function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Besch
 <?php 
     }
     if ($view_listing == 1){
-        echo "<div class='featured_list_viewlisting'><a href='".
+        echo "<div class='featured_list_viewlisting row col-md-12'><a class='btn btn-warning' role='button' href='".
           JRoute::_($link1, false)."' target='_self'>"
           . _REALESTATE_MANAGER_LABEL_VIEW_LISTING . "</a></div>";
     }
@@ -376,4 +376,4 @@ function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Besch
             <div>&nbsp;</div>
     </div>
 </div>
-<div style="text-align: center;"><a href="http://ordasoft.com/Real-Estate-Manager-Software-Joomla.html" style="font-size: 10px;">Powered by OrdaSoft!</a></div>
+<div  class="ordasoft" style="text-align: center;"><a href="http://ordasoft.com/Real-Estate-Manager-Software-Joomla.html" style="font-size: 10px;">Powered by OrdaSoft!</a></div>

@@ -240,7 +240,7 @@ jQuerREL(function() {
           <?php }?>
           </div>
 <div class="search_button">
-    <input type="submit" value="<?php echo _REALESTATE_MANAGER_LABEL_SEARCH_BUTTON; ?>" class="button"  ></input>
+    <input type="submit" value="<?php echo _REALESTATE_MANAGER_LABEL_SEARCH_BUTTON; ?>" class="btn btn-search"  ></input>
 </div>
         <input type="hidden" name="Title" value="on" />
         <input type="hidden" name="typeLayout" value="alone_category" />

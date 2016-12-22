@@ -16,4 +16,4 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 require JModuleHelper::getLayoutPath('mod_realestatemanagersearch_j3',$params->get('layout', 'default'));
 ?>
-<div style="text-align: center;"><a href="http://ordasoft.com" style="font-size: 10px;">Powered by OrdaSoft!</a></div>
+<div class="ordasoft" style="text-align: center;"><a href="http://ordasoft.com" style="font-size: 10px;">Powered by OrdaSoft!</a></div>

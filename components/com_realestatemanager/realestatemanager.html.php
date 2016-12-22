@@ -26,8 +26,8 @@ $GLOBALS['templateDir'] = $templateDir;
 $GLOBALS['doc'] = $doc = JFactory::getDocument();
 $g_item_count = 0;
 
-$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css');
+//$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+//$doc->addStyleSheet('//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css');
 //$doc->addScript('//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js');
 $doc->addStyleSheet( $mosConfig_live_site . 
       '/components/com_realestatemanager/includes/jquery-ui.css');

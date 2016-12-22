@@ -16,6 +16,10 @@ JHtml::_('bootstrap.framework');
     <meta name="author" content="">
 
     <title>SpaceSharing</title>
+	
+	
+	 <!-- font-awesome  CSS -->
+    <link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <!-- Bootstrap Core CSS -->
     <link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/css/bootstrap.css" rel="stylesheet">

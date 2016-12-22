@@ -5,6 +5,8 @@ body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }
+
+/*
 p {
   font-size: 20px;
 }
@@ -24,14 +26,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
 }
 
-h7 {
-  font-family: "Montserrat";
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: x-large;
-  color: black;
 
-}
 
 
 header {
@@ -173,7 +168,7 @@ footer .footer-below {
   background-color: #233140;
 }
 
-
+*/
 
 .test1 {
 	background-color: red !important;
@@ -187,7 +182,7 @@ footer .footer-below {
 
 .test3 {
 	background-color: green !important;
-	min-height: 125px !important;
+	min-height: 50px !important;
 }
 
 .test4 {
@@ -220,4 +215,74 @@ footer .footer-below {
     bottom: 0;
     right: 100px;
   }
+}
+
+
+#rem_mod_search{
+	background-color: #f0ad4e;
+	border-radius: 20px;
+	padding: 20px 20px 20px 20px;
+}
+
+.btn-search {
+    color: black;
+    background-color: #dfdfdf;
+    border-color: #dfdfdf;
+}
+
+
+#rem_mod_map{
+	background-color: #dfdfdf;
+	border-radius: 20px;
+	padding: 20px 20px 20px 20px;
+}
+
+ 
+ #column-wrap {
+    overflow: hidden; 
+}
+
+.main-left-col {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.main-right-col {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.ordasoft a, a:hover,a:focus,a:active,a.active {
+  color: #92999E;
+  outline: none;
+}
+
+
+
+.featured_list_category a , a:hover,a:focus,a:active,a.active{
+	color: #57FD44;
+
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+h1 {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: x-large;
+  color: black;
+  border-bottom: 2px solid #57FD44;
+  line-height: 35px;	
+}
+
+.featured_houses_line_style{
+	position:relative; 
+	display:inline-block; 
+	float:left; 
+	margin-right:15px;
+	border-color: red;
 }

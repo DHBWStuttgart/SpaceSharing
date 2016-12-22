@@ -18,7 +18,7 @@ $logo      		= $this->params->get('logo');
 <div class="header">
 		<div id="header" class="container">
 			<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 test3">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
 						<jdoc:include type="modules" name="loginarea" style="xhtml" />	
 					</div>
 			</div>
@@ -27,13 +27,13 @@ $logo      		= $this->params->get('logo');
 				$this->countModules('mainmenu'))
 				: ?>
 			<div class="row">
-				    <div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test4">
+				    <div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
 						<div class="row">							
-							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test4">	
+							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">	
 								
 								<!--Navigation-->
 								<div id="navigation">
-									<div class="container-fluid">
+									<div class="container-fluid nopadding">
 
 										<div class="navbar navbar-default " role="navigation">
 											<div class="navbar-header">
@@ -88,14 +88,20 @@ $logo      		= $this->params->get('logo');
 	$this->countModules('map_2')) 
 	:?>
 	<div class="row">
-		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 test1">
+		<div id="column-wrap"> 
+		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 main-left-col ">
+		<h1>Suche</h1>
 			<jdoc:include type="modules" name="roomsearch" style="xhtml" />
 			<jdoc:include type="modules" name="roomsearch_2" style="xhtml" />
 		</div>
-		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 test2">
+		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 main-right-col ">
+		<h1>Karte</h1>
 			<jdoc:include type="modules" name="map" style="xhtml" />
 			<jdoc:include type="modules" name="map_2" style="xhtml" />
 		</div>
+		</div>
+		
+		
 	</div>
 	<?php endif; ?>
 	
@@ -109,17 +115,21 @@ $logo      		= $this->params->get('logo');
 		$this->countModules('ContentTop2') || 
 		$this->countModules('ContentBottom2'))
 		: */ ?>
-			<div class="row">
-				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 test3">
-				<h7> Raumübersicht </h7> 
+			<div class="row" style="padding-top:20px">
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 ">
+				
+				<h1>Raumübersicht</h1> 
+				
 					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />
 					
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 					
 					<jdoc:include type="modules" name="ContentBottom1" style="xhtml" />
+				
 				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 test4">
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
+				<h1>Test</h1> 
 					<jdoc:include type="modules" name="ContentTop2" style="xhtml" />
 					<jdoc:include type="modules" name="ContentBottom2" style="xhtml" />
 				</div>
