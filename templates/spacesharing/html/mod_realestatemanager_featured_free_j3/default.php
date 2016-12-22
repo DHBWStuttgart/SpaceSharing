@@ -4,6 +4,20 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 ?>
 
+<?php
+function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Beschreibung auf 500 Zeichen
+  $string = trim($string);
+
+  if(strlen($string) > $length) {
+    $string = wordwrap($string, $length);
+    $string = explode("\n", $string, 2);
+    $string = $string[0] . $append;
+  }
+
+  return $string;
+}
+?>
+
 <div class="realestatemanager<?php if (isset($class_suffix)) echo $class_suffix; ?>">
     <div class="basictable<?php echo "-".$class_suffix; ?> basictable"> 
     <?php
@@ -261,7 +275,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
           "<i class='fa fa-map-marker'></i> {$row->hlocation}&nbsp;</div>";
     }
     if ($description == 1){
-        echo "<div class='featured_list_description'>{$text}...</div>";
+		
+		
+		
+		$shortedtext = truncate($text); //ruft die truncate funktion auf 
+		echo "<div class='featured_list_description'>{$shortedtext}</div>";        
+		
+		
+	
     }
     if ($features == 1 || $categories == 1 || $show_hits == 1 ){
     ?>
