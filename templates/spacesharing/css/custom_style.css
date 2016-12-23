@@ -286,3 +286,14 @@ h1 {
 	margin-right:15px;
 	border-color: red;
 }
+
+ 
+.product-category-all li{
+  
+   // border:1px solid #c1c1c2;    
+}
+.product-category-all li{
+ -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important; 
+}
