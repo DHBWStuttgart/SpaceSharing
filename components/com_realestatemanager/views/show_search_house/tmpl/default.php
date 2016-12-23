@@ -188,4 +188,6 @@ if($layout == "") $layout = "default";
     <div style="clear: both;"></div>
 </form>
 <?php positions_rem($params->get('showsearch04')); ?>
-<div style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>  
+<div class="ordasoft" style="text-align: center;">
+	<a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a>
+</div>  

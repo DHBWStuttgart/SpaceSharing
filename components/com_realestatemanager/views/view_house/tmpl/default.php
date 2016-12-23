@@ -1474,4 +1474,4 @@ if ($house->listing_type == 1) {
      
     <a class="rem-close" title="Close" href="#rem-close"></a>
 </div>
-<div style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>
+<div class="ordasoft" style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>

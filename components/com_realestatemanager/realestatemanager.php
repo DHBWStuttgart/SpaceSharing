@@ -2145,7 +2145,7 @@ class PHP_realestatemanager {
                     }
                 }
             } else if (!$is_add_or) { 
-                echo"<h1 style='text-align:center'>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND . "</h1>";
+                echo"<h1>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND . "</h1>";
                 return;
             }
         } else if($ownername == 'Guest' || $ownername == 'anonymous' || $ownername == _REALESTATE_MANAGER_LABEL_ANONYMOUS ){
@@ -2379,7 +2379,7 @@ class PHP_realestatemanager {
               $layoutsearch = $params->get('showsearchhouselayout', 'default');
               PHP_realestatemanager::showSearchHouses($option, $catid, $option, $layoutsearch);
 
-              print_r("<h1 style='text-align:center'>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND .
+              print_r("<h1>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND .
                " </h1><br><br><div class='row-fluid'><div class='span9'></div></div>");
              positions_rem($params->get('notfound02'));
 
