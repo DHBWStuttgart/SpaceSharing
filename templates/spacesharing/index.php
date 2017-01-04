@@ -3,7 +3,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 // Get Parameter
 $logo      		= $this->params->get('logo');
+<<<<<<< HEAD
 $ftext       = $this->params->get('ftext');
+=======
+$ftext      	= $this->params->get('ftext');
+>>>>>>> origin/master
 
 
 
@@ -243,7 +247,11 @@ $ftext       = $this->params->get('ftext');
 					<div class=" footer-top">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
 							<h3>Mehr über Spacesharing</h3>
+<<<<<<< HEAD
 							<p> <?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?></p>
+=======
+							<p> <?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?>  </p>
+>>>>>>> origin/master
 						</div>
 						
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
@@ -292,8 +300,18 @@ $ftext       = $this->params->get('ftext');
 								<li><a href="#">Terms & Conditions</a></li>
 							</ul>
 						</div>
+<<<<<<< HEAD
+						<div class="clear"></div>	
+					</div>
+					
+				</div>
+				<!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test3">
+					<jdoc:include type="modules" name="footer_right" style="xhtml" />
+				</div> -->
+=======
 					</div>					 
 				
+>>>>>>> origin/master
 			</div>
 			<?php if ($this->countModules('debug')): ?>
 			<div class="row">
@@ -304,6 +322,11 @@ $ftext       = $this->params->get('ftext');
 			<?php endif; ?>
 	</div>
 </div> <!-- footer2-->
+
+
+
+<?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?>  
+
 
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/js/bootstrap.min.js"></script>
 </body>
