@@ -218,7 +218,7 @@ $ftext       = $this->params->get('ftext');
 
 <div id="footer1">
 	<div class="container">
-
+	
 		<?php if (
 		$this->countModules('Footer1') || 
 		$this->countModules('Footer2') || 
@@ -247,15 +247,13 @@ $ftext       = $this->params->get('ftext');
 					<div class=" footer-top">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
 							<h3>Mehr über Spacesharing</h3>
-
 							<p> <?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?></p>
-
 						</div>
 						
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
 							<h3>Folge uns</h3>
-							
-						<a id="923735" href="http://www.xn--geflltmirbutton-2kb.de">gefälltmirbutton</a><script src="http://www.gefälltmirbutton.de/likebutton.php?u=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F%3Ffref%3Dts&h=35&w=310&l=standard&s=border%3Anone%3B+overflow%3Ahidden%3B+width%3A310px%3B+height%3A35px%3B&i=923735&sf=true&st=false&sh=false&typ=2" type="text/javascript"></script>
+							<!-- Facebook Like Button https://developers.facebook.com/docs/plugins/like-button -->	
+							<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F&width=450&layout=standard&action=like&size=large&show_faces=false&share=false&height=35&colorscheme=dark&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 						</div>
 						
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer three">
@@ -276,16 +274,13 @@ $ftext       = $this->params->get('ftext');
 						</div>					
 					</div>					 
 				</div>
-			</div>
-			
-		
+			</div>		
 	</div>
 </div> <!-- footer1-->
 
 <div id="footer2">
 	<div class="container">
-			<div class="row footer">
-								
+			<div class="row footer">								
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  copyright">
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-left">
 						
@@ -297,16 +292,9 @@ $ftext       = $this->params->get('ftext');
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
 							</ul>
-						</div>
-
-					
-					</div>
-					
+						</div>					
+					</div>					
 			</div>
-
-									 
-				
-
 			
 			<?php if ($this->countModules('debug')): ?>
 			<div class="row">
@@ -317,11 +305,6 @@ $ftext       = $this->params->get('ftext');
 			<?php endif; ?>
 	</div>
 </div> <!-- footer2-->
-
-
-
-<?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?>  
-
 
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/js/bootstrap.min.js"></script>
 </body>
