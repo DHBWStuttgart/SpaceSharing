@@ -17,52 +17,120 @@ $logo      		= $this->params->get('logo');
 
 <div class="header">
 		<div id="header" class="container">
-			<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
-						<jdoc:include type="modules" name="loginarea" style="xhtml" />	
+		
+		<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test2 ">
+		
+		
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			  
+			  
+			   
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a href="<?php echo $this->params->get('logo_link') ?>">
+														<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
+													</a>
+				</div>
+			   
+				<div class="collapse navbar-collapse navbar-right bottom-align-text" id="bs-example-navbar-collapse-1">				
+				
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+					
+				</ul>
+				<form id="signin" class="navbar-form navbar-right" role="form">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
 					</div>
-			</div>
+
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+						<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
+					</div>
+
+					<button type="submit" class="btn btn-primary">Login</button>
+				</form>
+				
+			  </div>
+			</nav>
+		
+		
+
 				<?php if (
 				$this->countModules('loginarea') || 
 				$this->countModules('mainmenu'))
 				: ?>
-			<div class="row">
+			
 				    <div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
 						<div class="row">							
-							<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">	
+							<div class="main_menu">	
 								
 								<!--Navigation-->
 								<div id="navigation">
-									<div class="container-fluid nopadding">
+									
 
-										<div class="navbar navbar-default " role="navigation">
-											<div class="navbar-header">
+										<div class="navbar navbar-default  " role="navigation">
+											<div class="navbar-header ">
 												<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#targetedestination">
 													<span class="sr-only">Toggle navigation</span>
 													<span class="icon-bar"></span>
 													<span class="icon-bar"></span>
 													<span class="icon-bar"></span>
 												</button>
-
+												
 												<div id="brand">
 													<a href="<?php echo $this->params->get('logo_link') ?>">
 														<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
 													</a>
 												</div>
 											</div>
-
-											<div class="navbar-collapse collapse navbar-right bottom-align-text" id="targetedestination">
-											<?php if ($this->countModules('mainmenu')) : ?>
-												<nav class="navigation" role="navigation">
+											
+											
 												
-													<jdoc:include type="modules" name="mainmenu" style="none" />
+											
+												<div class="navbar-collapse collapse navbar-right bottom-align-text  " id="targetedestination">
+												
+												
+												<jdoc:include type="modules" name="loginarea" style="xhtml" />	
+												<?php if ($this->countModules('mainmenu')) : ?>
+													<nav class="navigation" role="navigation">
 													
-												</nav>
-											<?php endif; ?>
+														<jdoc:include type="modules" name="mainmenu" style="none" />
+														
+														
+														<!--
+														<form id="signin" class="navbar-form navbar-right" role="form">
+															<div class="input-group">
+																<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+																<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
+															</div>
+
+															<div class="input-group">
+																<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+																<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
+															</div>
+
+															<button type="submit" class="btn btn-primary">Login</button>
+														</form>
+													
+													-->
+													
+													</nav>
+												<?php endif; ?>
+												</div>
+												
 											</div>
 
 										</div>
-									</div>
+									
 								</div>
 								<!--Navigation-->
 
@@ -70,10 +138,10 @@ $logo      		= $this->params->get('logo');
 						
 						</div>	
 				    </div>
-				</div>
+				
 				<?php endif; ?>
 			
-		
+		</div> 
 		
 		</div> 
 </div>  <!-- header -->
