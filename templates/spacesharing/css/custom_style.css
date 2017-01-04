@@ -324,6 +324,12 @@ h1 {
 }
 
 <<<<<<< HEAD
+
+.footer.three address{
+	color:#908f8f;
+}
+=======
+<<<<<<< HEAD
 .copyright {
 	padding-top: 20px;
 	padding-bottom:20px;
@@ -364,4 +370,5 @@ div.footer-modul a:hover,.copyright-right ul li a:hover,.footer.three ul li a:ho
 .footer.three ul{
 	color:#908f8f;
 }
+>>>>>>> origin/master
 >>>>>>> origin/master

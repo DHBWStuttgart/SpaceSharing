@@ -254,7 +254,29 @@ $ftext      	= $this->params->get('ftext');
 						
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer three">
 							<h3>Kontakt Information</h3>
+							
+							<address><span class="glyphicon glyphicon-home"></span>
+							<strong>Reallabor Spacesharing</strong><br>
+							  Am Weißenhof 1<br>
+							  70191 Stuttgart<br>
+							 </address>
+
+							<address>
+							  <strong>Reallabor Spacesharing</strong><br>
+							  <abbr title="Telefonnummer"><span class="glyphicon glyphicon-phone"></span>Tel.:</abbr> (0711) 1234567890 <br>
+							  <span class="glyphicon glyphicon-envelope"></span><a href="mailto:#"> info@spacesharing.de</a>
+							</address>
+							
+							<!--
 							<ul>
+<<<<<<< HEAD
+								<li><span class="glyphicon glyphicon-home"</span><span>Reallabor Spacesharing, Stuttgart</span></li>
+								<li><span class="glyphicon glyphicon-phone"></span>1234567890  </li>
+								<li><span class="glyphicon glyphicon-envelope"</span><a href="mailto:info@example.com">contact@example.com</a> </li>
+							</ul> 
+							-->
+							
+=======
 								<li>Spacesharing <span>Lorem ipsum dolor,</span>Stuttgart  </li>
 								<li>1234567890  </li>
 								<li><a href="mailto:info@example.com">contact@example.com</a> </li>
@@ -276,6 +298,7 @@ $ftext      	= $this->params->get('ftext');
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-left">
 						
 							<div class="footer-modul"><jdoc:include type="modules" name="copyright" style="xhtml" /></div>
+>>>>>>> origin/master
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-right">
 							<ul>
