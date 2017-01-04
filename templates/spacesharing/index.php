@@ -16,8 +16,6 @@ $Mail    = $this->params->get('Mail');
 
 
 
-
-
 ?>
 
 <!doctype html>
@@ -198,7 +196,8 @@ $Mail    = $this->params->get('Mail');
 			<div class="row" style="padding-top:20px">
 				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 ">
 				
-				<h1>Raumübersicht</h1> 
+				<?php echo '<h1>' . 'Raumübersicht'  . "</h1>"; ?>
+			
 				
 					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />
 					
@@ -295,11 +294,7 @@ $Mail    = $this->params->get('Mail');
 							<div class="footer-modul"><jdoc:include type="modules" name="copyright" style="xhtml" /></div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-right">
-							<ul>
-								<li><a href="#">Company Information</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-							</ul>
+						<jdoc:include type="modules" name="footermenu" style="xhtml" />							
 						</div>					
 					</div>					
 			</div>

@@ -35,7 +35,10 @@
 		<position>Footer3</position>
 		<position>Footer4</position>
 		<position>debug</position>
-		<position>copyright</position>	  		
+		<position>copyright</position>	
+		<position>footermenu</position>	
+
+  		
 		
     </positions>
 

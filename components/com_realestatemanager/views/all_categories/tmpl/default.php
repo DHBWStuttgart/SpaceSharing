@@ -6,7 +6,10 @@ $doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/in
 ?>
     <?php positions_rem($params->get('allcategories01')); ?>
 <div class="componentheading<?php echo $params->get('pageclass_sfx'); ?>">
-<?php echo $currentcat->header; ?>
+<?php echo '<h1>' . $currentcat->header . '</h1>';
+
+
+?>
 </div>
 <?php positions_rem($params->get('allcategories02')); ?>
 <table class="basictable table_44" border="0" cellpadding="4" cellspacing="0" width="100%">

@@ -18,7 +18,15 @@ if (($tagId = $params->get('tag_id', '')))
 
 // The menu class is deprecated. Use nav instead
 ?>
-<ul class="nav <?php echo $class_sfx; ?> navbar-nav"<?php echo $id; ?>>
+<ul class="
+<?php 
+if ($tagId == 'mainmenu'){
+	echo 'nav navbar-nav ' . $class_sfx . '"';
+}else{
+	echo $class_sfx . '"';
+}
+echo $id . '>';
+?>
 
 
 	
