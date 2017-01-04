@@ -212,7 +212,7 @@ $ftext      	= $this->params->get('ftext');
 
 
 
-<div id="footer">
+<div id="footer1">
 	<div class="container">
 
 		<?php if (
@@ -237,14 +237,10 @@ $ftext      	= $this->params->get('ftext');
 			</div>
 		<?php endif; ?>
 
-		<?php if (
-		$this->countModules('footer_left') || 
-		$this->countModules('footer_right') || 
-		$this->countModules('debug')): ?>
+		
 			<div class="row footer">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-					<jdoc:include type="modules" name="footer_left" style="xhtml" />
-					<div class="row footer-top">
+					<div class=" footer-top">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
 							<h3>Mehr über Spacesharing</h3>
 							<p> <?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?>  </p>
@@ -253,8 +249,7 @@ $ftext      	= $this->params->get('ftext');
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
 							<h3>Folge uns</h3>
 							
-						<a id="6906" href="http://www.xn--geflltmirbutton-2kb.de">www.gefälltmirbutton.de/</a><script src="http://www.gefälltmirbutton.de/likebutton.php?u=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F%3Ffref%3Dts&h=30&w=100&l=button&s=border%3Anone%3B+overflow%3Ahidden%3B+width%3A100px%3B+height%3A30px%3B&i=6906&sf=true&st=false&sh=false&typ=17" type="text/javascript"></script>
-						
+						<a id="923735" href="http://www.xn--geflltmirbutton-2kb.de">gefälltmirbutton</a><script src="http://www.gefälltmirbutton.de/likebutton.php?u=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F%3Ffref%3Dts&h=35&w=310&l=standard&s=border%3Anone%3B+overflow%3Ahidden%3B+width%3A310px%3B+height%3A35px%3B&i=923735&sf=true&st=false&sh=false&typ=2" type="text/javascript"></script>
 						</div>
 						
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer three">
@@ -264,21 +259,32 @@ $ftext      	= $this->params->get('ftext');
 								<li>1234567890  </li>
 								<li><a href="mailto:info@example.com">contact@example.com</a> </li>
 							</ul>
+						</div>					
+					</div>					 
+				</div>
+			</div>
+			
+		
+	</div>
+</div> <!-- footer1-->
+
+<div id="footer2">
+	<div class="container">
+			<div class="row footer">
+								
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  copyright">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-left">
+						
+							<div class="footer-modul"><jdoc:include type="modules" name="copyright" style="xhtml" /></div>
 						</div>
-					
-					</div>
-					
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-						<div class="copy-left">
-							<p class="footer-gd">© 2016 Simple Footer Widget. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
-						</div>
-						<div class="copy-right">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-right">
 							<ul>
 								<li><a href="#">Company Information</a></li>
 								<li><a href="#">Privacy Policy</a></li>
 								<li><a href="#">Terms & Conditions</a></li>
 							</ul>
 						</div>
+<<<<<<< HEAD
 						<div class="clear"></div>	
 					</div>
 					
@@ -286,15 +292,20 @@ $ftext      	= $this->params->get('ftext');
 				<!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test3">
 					<jdoc:include type="modules" name="footer_right" style="xhtml" />
 				</div> -->
+=======
+					</div>					 
+				
+>>>>>>> origin/master
 			</div>
+			<?php if ($this->countModules('debug')): ?>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 test2">
 					<jdoc:include type="modules" name="debug" style="xhtml" />
 				</div>
 			</div>
-		<?php endif; ?>
+			<?php endif; ?>
 	</div>
-</div> <!-- footer-->
+</div> <!-- footer2-->
 
 
 

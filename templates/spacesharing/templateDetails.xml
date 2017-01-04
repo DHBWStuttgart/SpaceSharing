@@ -34,9 +34,9 @@
 		<position>Footer2</position>
 		<position>Footer3</position>
 		<position>Footer4</position>
-		<position>footer_left</position>
-		<position>footer_right</position>
-		<position>debug</position>	        
+		<position>debug</position>
+		<position>copyright</position>	  		
+		
     </positions>
 
 	<config>
