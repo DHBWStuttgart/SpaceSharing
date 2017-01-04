@@ -192,13 +192,21 @@ footer .footer-below {
 
 
 
-#footer {
+#footer1 {
   background:none repeat scroll 0% 0% #333;
   border-top:1px solid #EAEAEA;
   padding:10px 0;
   margin:40px 0 0 0;
   width:100%;
 }
+
+#footer2 {
+  background:none repeat scroll 0% 0% #211E1E;
+  padding:10px 0;
+  margin:0 0 0 0;
+  width:100%;
+}
+
 
 .header {
   background:none repeat scroll 0% 0% #333;
@@ -298,9 +306,7 @@ h1 {
     border-radius: 0px !important; 
 }
 
-.footer-top{
-	background:#282828;
-}
+
 
 .footer h3{
 	color:#fff;
@@ -317,7 +323,52 @@ h1 {
    color:#fff;
 }
 
+<<<<<<< HEAD
 
 .footer.three address{
 	color:#908f8f;
 }
+=======
+<<<<<<< HEAD
+.copyright {
+	padding-top: 20px;
+	padding-bottom:20px;
+}
+
+div.footer-modul {
+    color: #908F8F;
+    font-weight: 500;
+	font-size:14px;
+}
+div.footer-modul a {
+	color:#fff;
+}
+
+
+
+.copyright-right ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 0px;
+    border-left: 1px solid #444343;
+    padding: 0 12px;
+}
+
+.copyright-right ul li a {
+    color: #908F8F;
+	font-size:13px;
+}
+
+.copyright-right ul li:nth-child(1) {
+    border: none;
+}
+
+div.footer-modul a:hover,.copyright-right ul li a:hover,.footer.three ul li a:hover{
+	color:#57FD44;
+}
+=======
+.footer.three ul{
+	color:#908f8f;
+}
+>>>>>>> origin/master
+>>>>>>> origin/master
