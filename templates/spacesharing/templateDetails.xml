@@ -43,11 +43,11 @@
 		<fields name="params">
 			<fieldset name="advanced">
 				
-
 				<field name="logo" type="media"
 					label="SpaceSharing Logo" description="Logo auswählen" />
-
-				
+					
+				<field name="ftext" type="textarea"
+					label="Footer Text" description="Text" />
 
 			</fieldset>
 		</fields>

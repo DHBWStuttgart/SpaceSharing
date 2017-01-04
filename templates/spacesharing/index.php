@@ -3,6 +3,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 // Get Parameter
 $logo      		= $this->params->get('logo');
+$ftext      	= $this->params->get('ftext');
 
 
 
@@ -246,10 +247,7 @@ $logo      		= $this->params->get('logo');
 					<div class="row footer-top">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
 							<h3>Mehr über Spacesharing</h3>
-							<p> Nemo enim ipsam voluptatem quia
-							voluptas sit aspernatur aut odit aut fugit, 
-							sed quia consequuntur magni dolores eos qui 
-							ratione voluptatem sequi nesciunt.</p>
+							<p> <?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?>  </p>
 						</div>
 						
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
@@ -284,11 +282,6 @@ $logo      		= $this->params->get('logo');
 						<div class="clear"></div>	
 					</div>
 					
-					 
-									 
-					 
-					 
-					 
 				</div>
 				<!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test3">
 					<jdoc:include type="modules" name="footer_right" style="xhtml" />
@@ -302,6 +295,11 @@ $logo      		= $this->params->get('logo');
 		<?php endif; ?>
 	</div>
 </div> <!-- footer-->
+
+
+
+<?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?>  
+
 
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/js/bootstrap.min.js"></script>
 </body>
