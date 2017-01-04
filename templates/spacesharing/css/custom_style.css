@@ -297,3 +297,22 @@ h1 {
     -moz-border-radius: 0px !important;
     border-radius: 0px !important; 
 }
+
+.footer-top{
+	background:#282828;
+}
+
+.footer h3{
+	color:#fff;
+	font-size:18px;
+	font-weight:500;
+	margin-bottom: 31px;
+}
+
+.footer.one p{
+	color:#908f8f;
+}
+
+.footer.two span {
+   color:#fff;
+}

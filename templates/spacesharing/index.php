@@ -240,14 +240,59 @@ $logo      		= $this->params->get('logo');
 		$this->countModules('footer_left') || 
 		$this->countModules('footer_right') || 
 		$this->countModules('debug')): ?>
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test4">
+			<div class="row footer">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 					<jdoc:include type="modules" name="footer_left" style="xhtml" />
-					 Copyright &copy; SpaceSharing 2016
+					<div class="row footer-top">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
+							<h3>Mehr über Spacesharing</h3>
+							<p> Nemo enim ipsam voluptatem quia
+							voluptas sit aspernatur aut odit aut fugit, 
+							sed quia consequuntur magni dolores eos qui 
+							ratione voluptatem sequi nesciunt.</p>
+						</div>
+						
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
+							<h3>Folge uns</h3>
+							
+						<a id="6906" href="http://www.xn--geflltmirbutton-2kb.de">www.gefälltmirbutton.de/</a><script src="http://www.gefälltmirbutton.de/likebutton.php?u=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F%3Ffref%3Dts&h=30&w=100&l=button&s=border%3Anone%3B+overflow%3Ahidden%3B+width%3A100px%3B+height%3A30px%3B&i=6906&sf=true&st=false&sh=false&typ=17" type="text/javascript"></script>
+						
+						</div>
+						
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer three">
+							<h3>Kontakt Information</h3>
+							<ul>
+								<li>Spacesharing <span>Lorem ipsum dolor,</span>Stuttgart  </li>
+								<li>1234567890  </li>
+								<li><a href="mailto:info@example.com">contact@example.com</a> </li>
+							</ul>
+						</div>
+					
+					</div>
+					
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+						<div class="copy-left">
+							<p class="footer-gd">© 2016 Simple Footer Widget. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
+						</div>
+						<div class="copy-right">
+							<ul>
+								<li><a href="#">Company Information</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+							</ul>
+						</div>
+						<div class="clear"></div>	
+					</div>
+					
+					 
+									 
+					 
+					 
+					 
 				</div>
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test3">
+				<!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test3">
 					<jdoc:include type="modules" name="footer_right" style="xhtml" />
-				</div>
+				</div> -->
 			</div>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 test2">
