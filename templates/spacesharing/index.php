@@ -2,9 +2,16 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 // Get Parameter
-$logo      		= $this->params->get('logo');
+$logo     = $this->params->get('logo');
+$ftext    = $this->params->get('ftext');
+$Name     = $this->params->get('Name');
+$SuH      = $this->params->get('SuH');
+$PLZ      = $this->params->get('PLZ');
+$Ort      = $this->params->get('Ort');
+$Telefon  = $this->params->get('Telefon');
+$Mail    = $this->params->get('Mail');
 
-$ftext       = $this->params->get('ftext');
+
 
 
 
@@ -260,16 +267,17 @@ $ftext       = $this->params->get('ftext');
 							<h3>Kontakt Information</h3>
 							
 							<address><span class="glyphicon glyphicon-home"></span>
-							<strong>Reallabor Spacesharing</strong><br>
-							  Am Weißenhof 1<br>
-							  70191 Stuttgart<br>
+							<strong><?php if ($this->params->get( 'Name' )) : echo ($Name); endif; ?></strong><br>
+							<?php if ($this->params->get( 'SuH' )) : echo ($SuH); endif; ?></br>
+							<?php if ($this->params->get( 'PLZ' )) : echo ($PLZ); endif; ?> <?php if ($this->params->get( 'Ort' )) : echo ($Ort); endif; ?> </br>
 							 </address>
 
-							<address>
-							  <strong>Reallabor Spacesharing</strong><br>
-							  <abbr title="Telefonnummer"><span class="glyphicon glyphicon-phone"></span>Tel.:</abbr> (0711) 1234567890 <br>
-							  <span class="glyphicon glyphicon-envelope"></span><a href="mailto:#"> info@spacesharing.de</a>
-							</address>
+							 <?php if ($this->params->get( 'Telefon' )|| $this->params->get( 'Mail' )) : ?><address>
+							  <strong><?php if ($this->params->get( 'Name' )) : echo ($Name); endif; ?></strong><br>
+							  <?php if ($this->params->get( 'Telefon' )) : ?><abbr title="Telefonnummer"><span class="glyphicon glyphicon-phone"></span>Tel.:</abbr> <?php echo ($Telefon); endif; ?> <br>
+							  <?php if ($this->params->get( 'Mail' )) : ?> <span class="glyphicon glyphicon-envelope"></span><a href="mailto:#">  <?php echo ($Mail); endif; ?></a>
+							  </address>
+							<?php endif; ?>
 							
 						</div>					
 					</div>					 

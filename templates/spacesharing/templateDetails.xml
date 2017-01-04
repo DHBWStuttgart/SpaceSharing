@@ -48,6 +48,24 @@
 
 				<field name="ftext" type="textarea"
 					label="Footer Text" description="Text" />
+					
+				<field name="Name" type="text"
+					label="Name" description="Name" />
+										
+				<field name="SuH" type="text"
+					label="Straße und Hausnummer" description="Straße und Hausnummer" />
+										
+				<field name="PLZ" type="text"
+					label="PLZ" description="PLZ" />
+					
+				<field name="Ort" type="text"
+					label="Ort" description="Ort" />
+										
+				<field name="Telefon" type="text"
+					label="Telefon" description="Telefon" />
+										
+				<field name="Mail" type="text"
+					label="E-Mail" description="E-Mail" />
 
 			</fieldset>
 		</fields>
