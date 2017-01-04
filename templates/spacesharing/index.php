@@ -299,15 +299,15 @@ $ftext       = $this->params->get('ftext');
 							</ul>
 						</div>
 
-						<div class="clear"></div>	
+					
 					</div>
 					
-				</div>
+			</div>
 
-					</div>					 
+									 
 				
 
-			</div>
+			
 			<?php if ($this->countModules('debug')): ?>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 test2">
