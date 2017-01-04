@@ -3,6 +3,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 // Get Parameter
 $logo      		= $this->params->get('logo');
+$ftext       = $this->params->get('ftext');
 
 
 
@@ -242,10 +243,7 @@ $logo      		= $this->params->get('logo');
 					<div class=" footer-top">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
 							<h3>Mehr über Spacesharing</h3>
-							<p> Nemo enim ipsam voluptatem quia
-							voluptas sit aspernatur aut odit aut fugit, 
-							sed quia consequuntur magni dolores eos qui 
-							ratione voluptatem sequi nesciunt.</p>
+							<p> <?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?></p>
 						</div>
 						
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
@@ -269,20 +267,6 @@ $logo      		= $this->params->get('logo');
 							  <span class="glyphicon glyphicon-envelope"></span><a href="mailto:#"> info@spacesharing.de</a>
 							</address>
 							
-							<!--
-							<ul>
-<<<<<<< HEAD
-								<li><span class="glyphicon glyphicon-home"</span><span>Reallabor Spacesharing, Stuttgart</span></li>
-								<li><span class="glyphicon glyphicon-phone"></span>1234567890  </li>
-								<li><span class="glyphicon glyphicon-envelope"</span><a href="mailto:info@example.com">contact@example.com</a> </li>
-							</ul> 
-							-->
-							
-=======
-								<li>Spacesharing <span>Lorem ipsum dolor,</span>Stuttgart  </li>
-								<li>1234567890  </li>
-								<li><a href="mailto:info@example.com">contact@example.com</a> </li>
-							</ul>
 						</div>					
 					</div>					 
 				</div>
@@ -300,7 +284,6 @@ $logo      		= $this->params->get('logo');
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-left">
 						
 							<div class="footer-modul"><jdoc:include type="modules" name="copyright" style="xhtml" /></div>
->>>>>>> origin/master
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-right">
 							<ul>
