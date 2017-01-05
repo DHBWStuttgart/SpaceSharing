@@ -28,9 +28,9 @@ $Mail    = $this->params->get('Mail');
 <div class="header">
 		<div id="header" class="container">
 		
-		<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12 test2 ">
+		<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
 		
-		
+		<!---
 			<nav class="navbar navbar-default">
 			  <div class="container-fluid">
 			  
@@ -71,6 +71,8 @@ $Mail    = $this->params->get('Mail');
 				
 			  </div>
 			</nav>
+			
+			-->
 		
 		
 
