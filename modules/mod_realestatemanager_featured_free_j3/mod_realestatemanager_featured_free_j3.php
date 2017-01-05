@@ -248,7 +248,7 @@ if($id == '') return;
     $query = "SELECT h.htitle, h.id, h.image_link, h.hits,  c.id AS catid, ".
           " c.title AS cattitle, h.price, h.published, h.priceunit, ".
           "  h.hlocation, h.featured_clicks, h.featured_shows, h.rooms, ".
-          " h.year, h.bedrooms, h.house_size, h.description, h.listing_type".
+          " h.year, h.house_size, h.description, h.listing_type".
 
             ' FROM #__rem_houses AS h, #__rem_main_categories AS c , #__rem_categories AS vc ' .
             ' WHERE h.id <> '.(int) $id." and c.section='com_realestatemanager' ".
@@ -260,7 +260,7 @@ if($id == '') return;
               " AND h.approved='1' " ;
         $query_flag = true;
 
-        if($params->get('optBedrooms')==0)    $query .= ' and h.bedrooms =(select bedrooms from #__rem_houses t where t.id = '.(int) $id . ')';
+        
         if($params->get('optCategory')==0) $query .= ' and vc.idcat in (select idcat from #__rem_categories t2 where t2.iditem = '.(int) $id . ')';
         if($params->get('optCity')==0) $query .= ' and h.hcity =(select hcity from #__rem_houses t3 where t3.id = '.(int) $id . ')';
 
@@ -274,7 +274,7 @@ else
         $query = "SELECT h.htitle, h.id, h.image_link, h.hits,  c.id AS catid, ".
       " c.title AS cattitle, h.price, h.published, h.priceunit, ".
       "  h.hlocation, h.featured_clicks, h.featured_shows, h.rooms, ".
-      " h.year, h.bedrooms, h.house_size, h.description, h.listing_type
+      " h.year, h.house_size, h.description, h.listing_type
       
             \n FROM #__rem_houses AS h
             \n LEFT JOIN #__rem_categories AS hc ON hc.iditem=h.id

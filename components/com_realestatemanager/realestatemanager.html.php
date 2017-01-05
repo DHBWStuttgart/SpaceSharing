@@ -565,6 +565,7 @@ class HTML_realestatemanager {
          '/components/com_realestatemanager/includes/realestatemanager.css');
 
         $deep++;
+		echo "<ul class='list-group product-category-all'>";
         for ($i = 0; $i < count($cat_all); $i++) {
             if (($id == $cat_all[$i]->parent_id) && ($cat_all[$i]->display == 1)) {
                 $g_item_count++;
@@ -572,6 +573,7 @@ class HTML_realestatemanager {
                 $link = 'index.php?option=com_realestatemanager&amp;task=showCategory&amp;catid='
                    . $cat_all[$i]->id . '&amp;Itemid=' . $Itemid;
                 ?>
+				<li class="list-group-item">
                 <div class="table_59 <?php echo $tabclass[($g_item_count % 2)]; ?>">
                     <span class="col_01">
                 <?php
@@ -610,7 +612,9 @@ class HTML_realestatemanager {
               if ($realestatemanager_configuration['subcategory']['show'])
                     HTML_realestatemanager::showInsertSubCategory($cat_all[$i]->id,
                      $cat_all, $params, $tabclass, $Itemid, $deep);
+			 echo "</li>";
             }//end if ($id == $cat_all[$i]->parent_id)
+		echo "</ul>";
         }//end for(...) 
     }
 
