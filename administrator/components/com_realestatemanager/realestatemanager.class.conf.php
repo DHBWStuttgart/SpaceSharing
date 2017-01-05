@@ -41,7 +41,7 @@ $realestatemanager_configuration['rentrequest']['registrationlevel']='-2';
 $realestatemanager_configuration['housestatus']['show']='1';
 $realestatemanager_configuration['houserequest']['registrationlevel']='';
 // buy settings
-$realestatemanager_configuration['buystatus']['show']='1';
+$realestatemanager_configuration['buystatus']['show']='0';
 $realestatemanager_configuration['buyrequest']['registrationlevel']='-2';
 // edoc settings
 $realestatemanager_configuration['edocs']['allow']='1';
@@ -114,8 +114,8 @@ $realestatemanager_configuration['user_manager_rem']['5']['count_homes']='0';
 $realestatemanager_configuration['user_manager_rem']['5']['count_foto']='0';
 $realestatemanager_configuration['user_manager_rem']['8']['count_homes']='0';
 $realestatemanager_configuration['user_manager_rem']['8']['count_foto']='0';
-$realestatemanager_configuration['user_manager_rem']['10']['count_homes']='0';
-$realestatemanager_configuration['user_manager_rem']['10']['count_foto']='0';
+$realestatemanager_configuration['user_manager_rem']['10']['count_homes']='10';
+$realestatemanager_configuration['user_manager_rem']['10']['count_foto']='10';
 $realestatemanager_configuration['user_manager_rem']['12']['count_homes']='10';
 $realestatemanager_configuration['user_manager_rem']['12']['count_foto']='10';
 $realestatemanager_configuration['user_manager_rem']['9']['count_homes']='0';
@@ -139,7 +139,7 @@ $realestatemanager_configuration['searchlayout_map']['show']='1';
 $realestatemanager_configuration['searchlayout_map']['registrationlevel']='-2';
 $realestatemanager_configuration['searchlayout_orderby']['show']='0';
 $realestatemanager_configuration['searchlayout_orderby']['registrationlevel']='-2';
-$realestatemanager_configuration['search_option']['show']='0';
+$realestatemanager_configuration['search_option']['show']='1';
 $realestatemanager_configuration['search_option']['registrationlevel']='-2';
 // show in category picture
 $realestatemanager_configuration['cat_pic']['show']='1';
@@ -179,10 +179,10 @@ $realestatemanager_configuration['extra9']='0';
 //extra10
 $realestatemanager_configuration['extra10']='0';
 $realestatemanager_configuration['featuredmanager']['placeholder']='Interior, Exterior, Specific';
-$realestatemanager_configuration['currency']='USD=1;EUR=0.89;CAD=1.2;';
+$realestatemanager_configuration['currency']='EUR=0.89';
 $realestatemanager_configuration['allowed_exts']='';
 $realestatemanager_configuration['allowed_exts_img']='jpeg,jpg,png,gif';
-$realestatemanager_configuration['price_format']='.';
+$realestatemanager_configuration['price_format']=',';
 // 1 - affter 0 - beffore
 $realestatemanager_configuration['price_unit_show']='1';
 $realestatemanager_configuration['date_format']='%Y-%m-%d';

@@ -167,14 +167,7 @@ if($layout == "") $layout = "default";
                 <div style="clear: both;"></div>
             </div>
                     <div class="container_box_2 container_box_3">
-            <div class="col_box_2">
-                <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_TYPE; ?></span>
-                <?php echo $params->get('listing_type_list'); ?>
-            </div>
-            <div class="col_box_2">
-                <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_STATUS; ?></span>
-                <?php echo $params->get('listing_status_list'); ?>
-            </div>
+
         </div>
         <div class="col_box_button">
         <input class="button" type="submit" name="submit" 
@@ -188,6 +181,3 @@ if($layout == "") $layout = "default";
     <div style="clear: both;"></div>
 </form>
 <?php positions_rem($params->get('showsearch04')); ?>
-<div class="ordasoft" style="text-align: center;">
-	<a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a>
-</div>  

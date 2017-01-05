@@ -1870,8 +1870,6 @@ class PHP_realestatemanager {
         $Extra9 = " ";
         $Extra10 = " ";
         $Rooms = " ";
-        $Bathrooms = " ";
-        $Bedrooms = " ";
         $Contacts = " ";
         $Agent = " ";
         $House_size = " ";
@@ -2019,21 +2017,6 @@ class PHP_realestatemanager {
                 $Rooms .= "LOWER(b.Rooms) LIKE '$exactly' ";
             }
 
-            if (isset($_REQUEST['Bathrooms']) && $_REQUEST['Bathrooms'] == "on") {
-                $Bathrooms = " ";
-                if ($is_add_or)
-                    $Bathrooms = " or ";
-                $is_add_or = true;
-                $Bathrooms .= "LOWER(b.bathrooms) LIKE '$exactly' ";
-            }
-            if (isset($_REQUEST['Bedrooms']) && $_REQUEST['Bedrooms'] == "on") {
-                $Bedrooms = " ";
-                if ($is_add_or)
-                    $Bedrooms = " or ";
-                $is_add_or = true;
-                $Bedrooms .= "LOWER(b.bedrooms) LIKE '$exactly' ";
-            }
-
             if (isset($_REQUEST['Contacts']) && $_REQUEST['Contacts'] == "on") {
                 $Contacts = " ";
                 if ($is_add_or)
@@ -2145,7 +2128,7 @@ class PHP_realestatemanager {
                     }
                 }
             } else if (!$is_add_or) { 
-                echo"<h1>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND . "</h1>";
+                echo"<h1 style='text-align:center'>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND . "</h1>";
                 return;
             }
         } else if($ownername == 'Guest' || $ownername == 'anonymous' || $ownername == _REALESTATE_MANAGER_LABEL_ANONYMOUS ){
@@ -2204,7 +2187,7 @@ class PHP_realestatemanager {
             "  " . $Title . "  " . $Address .
             "  " . $Country . "  " . $Region . "  " . $City . "  " . $Zipcode . "  " . $Extra1 .
             "  " . $Extra2 . "  " . $Extra3 . "  " . $Extra4 . "  " . $Extra5 . "  " . $Rooms .
-            "  " . $Bathrooms . "  " . $Bedrooms . "  " . $Contacts . "  " . $Agent .
+            "  " . $Contacts . "  " . $Agent .
             "  " . $House_size . " " . $Lot_size . " " . $Built_year . "  " . $ownername . "  ))") : (" "));
 
         if (trim($RentSQL) != "")
@@ -2379,7 +2362,7 @@ class PHP_realestatemanager {
               $layoutsearch = $params->get('showsearchhouselayout', 'default');
               PHP_realestatemanager::showSearchHouses($option, $catid, $option, $layoutsearch);
 
-              print_r("<h1>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND .
+              print_r("<h1 style='text-align:center'>" . _REALESTATE_MANAGER_LABEL_SEARCH_NOTHING_FOUND .
                " </h1><br><br><div class='row-fluid'><div class='span9'></div></div>");
              positions_rem($params->get('notfound02'));
 

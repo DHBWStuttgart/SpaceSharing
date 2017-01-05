@@ -304,14 +304,6 @@ if (count($rows) > 0) {
                 </div>
             <?php
         }
-        if (trim($row->bedrooms)) { ?>
-                <div class="row_text">
-                    <i class="fa fa-inbox"></i>
-                    <span class="col_text_1"><?php echo _REALESTATE_MANAGER_LABEL_BEDROOMS; ?>:</span>
-                    <span class="col_text_2"><?php echo $row->bedrooms; ?></span>
-                </div>
-                        <?php
-        }
 ?>
                         </div>
                     </div>

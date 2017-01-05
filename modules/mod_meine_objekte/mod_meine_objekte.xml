@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+    <name>Meine Objekte anzeigen</name>
+    <author>Marc-Philipp Reinbold</author>
+    <version>1.0.0</version>
+    <description>Zeigt die Objekte an, welche der Nutzer in die DB abgespeichert hat</description>
+	
+    <files>
+	    <filename module="mod_meine_objekte">mod_meine_objekte.php</filename>
+        <filename>mod_meine_objekte.xml</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+    </files>
+    <config>
+    </config>
+</extension>

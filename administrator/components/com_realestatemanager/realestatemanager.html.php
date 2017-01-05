@@ -1547,11 +1547,6 @@ class HTML_realestatemanager {
                        echo _REALESTATE_MANAGER_LABEL_PICTURE_FILE_NOT_ALLOWED; ?>";
                       document.getElementById('image_link_alert').style.color = "#FF0000";
                       return;
-                   } else if (form.edoc_file != undefined && (form.edoc_file.value != ''  &&  jQuerREL.inArray(ext2, availableExtFile) == -1)){
-                        window.scrollTo(0,findPosY(document.getElementById('rooms_alert')));
-                        document.getElementById('alert_edoc').innerHTML = "<?php echo "bad file ext"; ?>";
-                        document.getElementById('alert_edoc').style.color = "#FF0000";
-                        return;
                     } else if (form.price.value == '' || form.price.value == 0 || !isValidPrice(form.price.value)){
                         window.scrollTo(0,findPosY(document.getElementById('listing_alert_scroll')));
                         document.getElementById('price').placeholder = "<?php
@@ -1573,30 +1568,15 @@ class HTML_realestatemanager {
                         document.getElementById('rooms').style.borderColor = "#FF0000";
                         document.getElementById('rooms').style.color = "#FF0000";
                         return;
-                    } else if (form.bedrooms.value == '' || !isValidNumber(form.bedrooms.value)){
-                        window.scrollTo(0,findPosY(document.getElementById('rooms_alert')));
-                        document.getElementById('bedrooms').placeholder = "<?php
-                         echo _REALESTATE_MANAGER_INFOTEXT_JS_BEDROOMS; ?>";
-                        document.getElementById('bedrooms').style.borderColor = "#FF0000";
-                        document.getElementById('bedrooms').style.color = "#FF0000";
-                        return;
                     } else if (form.year.value == ''){
                         window.scrollTo(0,findPosY(document.getElementById('rooms_alert')));
                         document.getElementById('alert_year').innerHTML = "<?php
                          echo _REALESTATE_MANAGER_INFOTEXT_JS_BUILD_YEAR; ?>";
                         document.getElementById('alert_year').style.color = "red";
                         return;
-                    } else if (!isValidNumber(form.bathrooms.value)){
-                        window.scrollTo(0,findPosY(document.getElementById('rooms_alert')));
-                        document.getElementById('bathrooms').style.color = "#FF0000";
-                        return;
                     } else if (!isValidNumber(form.lot_size.value)){
                         window.scrollTo(0,findPosY(document.getElementById('hzipcode')));
                         document.getElementById('lot_size').style.color = "#FF0000";
-                        return;
-                    } else if (!isValidNumber(form.garages.value)){
-                        window.scrollTo(0,findPosY(document.getElementById('rooms_alert')));
-                        document.getElementById('garages').style.color = "#FF0000";
                         return;
                     } else if (!isValidNumber(form.featured_clicks.value)){
                         window.scrollTo(0,findPosY(document.getElementById('alert_advertisment')));
@@ -1606,83 +1586,7 @@ class HTML_realestatemanager {
                         window.scrollTo(0,findPosY(document.getElementById('alert_advertisment')));
                         document.getElementById('featured_shows').style.color = "#FF0000";
                         return;
-                    }else if(form.new_upload_track_url1){
-                      for (i = 1;document.getElementById('new_upload_track_url'+i); i++) {
-                        if(document.getElementById('new_upload_track'+i).value != '' 
-                          || document.getElementById('new_upload_track_url'+i).value != ''){
-                            if(document.getElementById('new_upload_track_kind'+i).value == ''){
-                              window.scrollTo(0,findPosY(document.getElementById('new_upload_track_kind'+i))-100);
-                              document.getElementById('new_upload_track_kind'+i).placeholder = "<?php
-                               echo _REALESTATE_MANAGER_ADMIN_INFOTEXT_JS_TRACK_KIND; ?>";
-                              document.getElementById('new_upload_track_kind'+i).style.borderColor = "#FF0000";
-                              document.getElementById('new_upload_track_kind'+i).style.color = "#FF0000";
-                              return;
-                            }else if(document.getElementById('new_upload_track_scrlang'+i).value == ''){
-                              window.scrollTo(0,findPosY(document.getElementById('new_upload_track_scrlang'+i))-100);
-                              document.getElementById('new_upload_track_scrlang'+i).placeholder = "<?php
-                               echo _REALESTATE_MANAGER_ADMIN_INFOTEXT_JS_TRACK_LANGUAGE; ?>";
-                              document.getElementById('new_upload_track_scrlang'+i).style.borderColor = "#FF0000";
-                              document.getElementById('new_upload_track_scrlang'+i).style.color = "#FF0000";
-                              return;
-                            }else if(document.getElementById('new_upload_track_label'+i).value == ''){
-                              window.scrollTo(0,findPosY(document.getElementById('new_upload_track_label'+i))-100);
-                              document.getElementById('new_upload_track_label'+i).placeholder = "<?php
-                               echo _REALESTATE_MANAGER_ADMIN_INFOTEXT_JS_TRACK_TITLE; ?>";
-                              document.getElementById('new_upload_track_label'+i).style.borderColor = "#FF0000";
-                              document.getElementById('new_upload_track_label'+i).style.color = "#FF0000";
-                              return;
-                            }
-                          }
-                      }
                     }
-
-                    for (i = 1;document.getElementById('new_upload_video'+i); i++){
-                      if(document.getElementById('new_upload_video'+i).files.length){
-                        if(document.getElementById('new_upload_video'+i).value != ''){
-                          total_file_size += document.getElementById('new_upload_video'+i).files[0].size;
-                          if(!file_upl){
-                            window.scrollTo(0,findPosY(document.getElementById('new_upload_video'+i))-100);
-                            document.getElementById('error_video').innerHTML = "<?php
-                             echo _REALESTATE_MANAGER_SETTINGS_VIDEO_ERROR_UPLOAD_OFF; ?>";
-                            document.getElementById('new_upload_video'+i).style.borderColor = "#FF0000";
-                            document.getElementById('new_upload_video'+i).style.color = "#FF0000";
-                            document.getElementById('error_video').style.color = "#FF0000";
-                            return;
-                          }
-                          if(document.getElementById('new_upload_video'+i).files[0].size >= post_max_size){
-                            window.scrollTo(0,findPosY(document.getElementById('new_upload_video'+i))-100);
-                            document.getElementById('error_video').innerHTML = "<?php
-                             echo _REALESTATE_MANAGER_SETTINGS_VIDEO_ERROR_POST_MAX_SIZE; ?>";
-                            document.getElementById('new_upload_video'+i).style.borderColor = "#FF0000";
-                            document.getElementById('new_upload_video'+i).style.color = "#FF0000";
-                            document.getElementById('error_video').style.color = "#FF0000";
-                            return;
-                          }
-                          if(document.getElementById('new_upload_video'+i).files[0].size >= upl_max_fsize){
-                            window.scrollTo(0,findPosY(document.getElementById('new_upload_video'+i))-100);
-                            document.getElementById('error_video').innerHTML = "<?php
-                             echo _REALESTATE_MANAGER_SETTINGS_VIDEO_ERROR_UPLOAD_MAX_SIZE; ?>";
-                            document.getElementById('new_upload_video'+i).style.borderColor = "#FF0000";
-                            document.getElementById('new_upload_video'+i).style.color = "#FF0000";
-                            document.getElementById('error_video').style.color = "#FF0000";
-                            return;
-                          }
-                        }
-                      }
-                    }
-
-                  if(total_file_size >= post_max_size){
-                    if(document.getElementById('error_video')){
-                      window.scrollTo(0,findPosY(document.getElementById('error_video'))-100);
-                      document.getElementById('error_video').innerHTML = "<?php
-                       echo JText::_('_REALESTATE_MANAGER_SETTINGS_VIDEO_ERROR_POST_MAX_SIZE'); ?>";
-                      document.getElementById('error_video').style.borderColor = "#FF0000";
-                      document.getElementById('error_video').style.color = "#FF0000";
-                      document.getElementById('error_video').style.color = "#FF0000";
-                      return;
-                    }
-                  }
-                }
                 submitform( pressbutton );
             }
           
@@ -1856,14 +1760,7 @@ class HTML_realestatemanager {
         <div id="rem_house_titlebox">
             <?php echo _REALESTATE_MANAGER_LABEL_PRICING; ?>
         </div>
-        <div class="row_add_house">
-            <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_TYPE; ?>:</span>
-            <div class="rem_house_input"><?php echo $listing_type_list; ?></div>
-        </div>
-        <div class="row_add_house"> 
-            <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_STATUS; ?>:</span>
-            <div class="rem_house_input"><?php echo $listing_status_list; ?></div>
-        </div>
+        
         <div class="row_add_house"> 
             <span><?php echo _REALESTATE_MANAGER_LABEL_PRICE; ?>:*</span>
             <div class="rem_house_input">
@@ -2268,21 +2165,6 @@ class HTML_realestatemanager {
              name="rooms" size="10" value="<?php echo $row->rooms; ?>" /></div>
         </div>
         <div class="row_add_house">
-            <span><?php echo _REALESTATE_MANAGER_LABEL_BATHROOMS; ?>:</span>
-            <div class="rem_house_input"><input class="inputbox" type="text" id="bathrooms"
-             name="bathrooms" size="10" value="<?php echo $row->bathrooms; ?>" /></div>
-        </div>
-        <div class="row_add_house">
-            <span><?php echo _REALESTATE_MANAGER_LABEL_BEDROOMS; ?>:*</span>
-            <div class="rem_house_input"><input class="inputbox" type="text" id="bedrooms"
-             name="bedrooms" size="10" value="<?php echo $row->bedrooms; ?>" /></div>
-        </div>
-        <div class="row_add_house">
-            <span><?php echo _REALESTATE_MANAGER_LABEL_GARAGES; ?>:</span>
-            <div class="rem_house_input"><input class="inputbox" type="text" id="garages"
-             name="garages" size="30" value="<?php echo $row->garages; ?>" /></div>
-        </div>
-        <div class="row_add_house">
             <div id="alert_year"></div>
             <span><?php echo _REALESTATE_MANAGER_LABEL_BUILD_YEAR; ?>:*</span>
             <div class="rem_house_input">
@@ -2312,182 +2194,7 @@ class HTML_realestatemanager {
                 $year = date("Y", mktime(0, 0, 0, date('m'), 1, date('Y')));
                 ?>
         </div>
-            <?php
-    if ($realestatemanager_configuration['edocs']['allow']) {
-        ?>  
-        <div class="row_add_house">
-            <div id="alert_edoc"></div>
-            <span><?php echo _REALESTATE_MANAGER_LABEL_EDOCUMENT_UPLOAD; ?>:</span>
-            <div class="rem_house_input"><input class="inputbox" type="file" id="edoc_file"
-             name="edoc_file" value="" size="50" maxlength="250"
-              onClick="document.adminForm.edok_link.value ='';"/></div>
-        </div>
-        <div class="row_add_house">
-            <span><?php echo _REALESTATE_MANAGER_LABEL_EDOCUMENT_UPLOAD_URL; ?>:</span>
-            <div class="rem_house_input"><input class="inputbox" type="text" name="edok_link"
-             value="<?php echo $row->edok_link; ?>" size="50" maxlength="250"/></div>
-        </div>
-                <?php
-                }
-    if (strlen($row->edok_link) > 0 and !$row->id_true) {
-                    ?>
-        <div class="row_add_house">
-            <span><?php echo _REALESTATE_MANAGER_LABEL_EDOCUMENT_DELETE; ?>:</span>
-            <div class="rem_house_input"><?php echo $delete_edoc; ?></div>
-        </div>
-        <?php
-    } ?>
-    <table>
-    <?php
-///////////////////////////////START edd video and track\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-      if($realestatemanager_configuration['videos_tracks']['show']) {  
-        $out='';
-        if (count($videos) > 0 && empty($youtube->code)) {
-          $out .= '<tr>'.
-                    '<td colspan="2"></td>'.
-                  '</tr>'.
-                  '<tr>'. 
-                    '<td valign="top" align="left">'._REALESTATE_MANAGER_LABEL_VIDEO.':</td>'.
-                  '</tr>';
-          for ($i = 0;$i < count($videos);$i++) {
-            $out .='<tr>' .
-                      '<td align="right">'._REALESTATE_MANAGER_LABEL_VIDEO_ATTRIBUTE.($i+1).':</td>'.
-                    '<td>';
-                  if(isset($videos[$i]->src) && substr($videos[$i]->src, 0, 4) != "http" 
-                    && empty($videos[$i]->youtube)){
-                    $out .='<input type="text" name="video'.$i.'"'.
-                            ' id="video'.$i.'"' .
-                            ' size="60"'.
-                            ' value="'.$mosConfig_live_site . $videos[$i]->src.'"'.
-                            ' readonly="readonly" />';
-                  }else{
-                    $out .='<input type="text" name="video_url'.$i.'"'.
-                            ' id="video_url'.$i.'"'.
-                            ' size="60" value="'. $videos[$i]->src . '"'.
-                            ' readonly="readonly" />';
-                  }
-        $out .='</td>'.
-              '</tr>'.
-              '<tr>'.
-                '<td align="right">'._REALESTATE_MANAGER_LABEL_VIDEO_DELETE . ':</td>'.
-                '<td>';
-                  if(isset($videos[$i]->id)) 
-                    $out .= '<input type="checkbox" name="video_option_del'. $videos[$i]->id .'"'.
-                               'value="' . $videos[$i]->id .'">'.
-                '</td>'.
-              '</tr>';
-          }
-        } else if (!empty($youtube->code)) {
-      $out .= '<tr>'.
-                '<td align="right">'._REALESTATE_MANAGER_LABEL_VIDEO_ATTRIBUTE.':</td>'.
-                '<td>'.
-                  '<input type="text"'.
-                          ' name="youtube_code'.$youtube->id.'"'.
-                          ' id="youtube_code'.$youtube->id.'"'.
-                          ' size="60" value="' . $youtube->code .'" />'.
-                '</td>'.
-              '</tr>'.
-              '<tr>'.
-                '<td align="right">'._REALESTATE_MANAGER_LABEL_VIDEO_DELETE . ':</td>'.
-                '<td>'.
-                  '<input type="checkbox"'. 
-                        ' name="youtube_option_del'.$youtube->id.'"'.
-                        ' value="'.$youtube->id.'">'.
-                '</td>'.
-              '</tr>';
-        }
-      $out .= '<tr>';
-      if(empty($youtube->code) && count($videos) < 5){
-        if(count($videos) > 0)
-          $out .= '<td></td>';
-        else
-          $out .= '<td>'._REALESTATE_MANAGER_LABEL_VIDEO.'</td>';
-            $out .= '<td id="v_items">'.
-                      ' <input id="v_add" type="button"'.
-                      ' name="new_video"'.
-                      ' value="'._REALESTATE_MANAGER_LABEL_ADD_NEW_VIDEO_FILE.'"'.
-                      ' onClick="new_videos()"/>'.
-                    '</td>'.
-                  '</tr>';
-      }
-        if (count($tracks) > 0) {
-          $out .= '<tr>'.
-                    '<td colspan="2"></td>'.
-                  '</tr>'.
-                  '<tr>'.
-                    '<td valign="top" align="left">'. _REALESTATE_MANAGER_LABEL_TRACK .':</td>'.
-                  '</tr>';
-          for ($i = 0;$i < count($tracks);$i++) {
-            $out .='<tr>'.
-                      '<td align="right">' . _REALESTATE_MANAGER_LABEL_TRACK_UPLOAD_URL.($i+1).':</td>'.
-                      '<td>';
-            if (isset($tracks[$i]->src) && substr($tracks[$i]->src, 0, 4) != "http"){
-              $out .='<input type="text"'.
-                          ' class="trackitems"'.
-                          ' size="60"'.
-                          ' value="'.$mosConfig_live_site.$tracks[$i]->src.'"'.
-                          ' readonly="readonly"/>';
-            }else{
-              $out .='<input type="text"'.
-                          ' class="trackitems"'.
-                          ' size="60"'. 
-                          ' value="'.$tracks[$i]->src.'"'.
-                          ' readonly="readonly"/>';
-            }
-            if (!empty($tracks[$i]->kind)) 
-              $out .= '<input class="trackitems"'.
-                            ' type="text"'.
-                            ' size="60"'.
-                            ' value="'.$tracks[$i]->kind.'"'.
-                            ' readonly="readonly"/>';
-            if (!empty($tracks[$i]->scrlang)) 
-              $out .= '<input class="trackitems"'.
-                            ' type="text"'.
-                            ' size="60"'.
-                            ' value="'.$tracks[$i]->scrlang.'"'.
-                            ' readonly="readonly"/>';
-            if (!empty($tracks[$i]->label)) 
-              $out .= '<input class="trackitems"'.
-                            ' type="text"'.
-                            ' size="60"'.
-                            ' value="'.$tracks[$i]->label.'"'.
-                            ' readonly="readonly"/>';
-            $out .= '</td>'.
-                  '</tr>'.
-                  '<tr>'.
-                    '<td align="right">'._REALESTATE_MANAGER_LABEL_TRACK_DELETE.':</td>'.
-                    '<td>';
-                    if(isset($tracks[$i]->id))
-              $out .=  '<input type="checkbox"'.
-                              ' name="track_option_del'.$tracks[$i]->id.'"'.
-                              ' value="'.$tracks[$i]->id .'">';
-          }
-        $out .= '<tr>';
-        if(count($tracks) > 0)
-          $out .= '<td></td>';
-        else
-          $out .= '<td>'._REALESTATE_MANAGER_LABEL_TRACK.'</td>';
-            $out .= '<td id="t_items">'.
-                      ' <input id="t_add" type="button"'.
-                      ' name="new_track"'.
-                      ' value="'._REALESTATE_MANAGER_LABEL_ADD_NEW_TRACK.'"'.
-                      ' onClick="new_tracks()"/>'.
-                    '</td>'.
-                  '</tr>';
-        }else{
-          $out .='<tr>'.
-                  '<td>'._REALESTATE_MANAGER_LABEL_TRACK.':</td>'.
-                  '<td id="t_items">'.
-                    '<input id="t_add" type="button" name="new_track"'.
-                            ' value="'._REALESTATE_MANAGER_LABEL_ADD_NEW_TRACK.'"'.
-                            ' onClick="new_tracks()"/>'.
-                  '</td>'.
-                '</tr>';
-        }
-        echo $out;
-      }            
-///////////////////////////////END edd video and track\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-    ?></table>
+
 
             <?php
             if ($realestatemanager_configuration['extra1'] == 0 
@@ -2589,22 +2296,7 @@ class HTML_realestatemanager {
                     <?php } ?>
     </div>
             <?php } ?>
-    <div id="alert_advertisment"></div>
-    <div class="rem_house_contacts">
-        <div id="rem_house_titlebox">
-            <?php echo _REALESTATE_MANAGER_HEADER_ADVERTISMENT; ?>
-        </div>
-            <div class="row_add_house">
-                    <span><?php echo _REALESTATE_MANAGER_LABEL_FEATURED_CLICKS; ?>:</span>
-                    <div class="rem_house_input"><input class="inputbox" type="text" id="featured_clicks"
-                     name="featured_clicks" size="30" value="<?php echo $row->featured_clicks; ?>" /></div>
-            </div>
-            <div class="row_add_house">
-                    <span><?php echo _REALESTATE_MANAGER_LABEL_FEATURED_SHOWS; ?>:</span>
-                    <div class="rem_house_input"><input class="inputbox" type="text" id="featured_shows"
-                     name="featured_shows" size="30" value="<?php echo $row->featured_shows; ?>" /></div>
-            </div>
-    </div>
+    
 
     <div class="rem_house_contacts">
         <div id="rem_house_titlebox">
@@ -3017,7 +2709,7 @@ class HTML_realestatemanager {
     <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
     <table cellpadding="4" cellspacing="0" border="0" width="100%" class="adminform  adminform_24">
       <tr>
-        <td width="100%" class="realestate_manager_caption"  >
+        <td width="100%" class="vehicle_manager_caption"  >
           <?php
           echo '<h2 align="center">'._REALESTATE_MANAGER_ADMIN_REQUEST_RENT_HISTORY.'</h2>';
           ?>
@@ -3079,7 +2771,7 @@ static function showUsersRentHistory($option,$allrent, &$userlist){
     $app->JComponentTitle = $html;
     ?>
     <div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
-    <form action="index.php" method="post" name="adminForm"  class="realestate_main"  id="adminForm" >
+    <form action="index.php" method="post" name="adminForm"  class="vehicles_main"  id="adminForm" >
       <table cellpadding="4" cellspacing="0" border="0" width="100%">
         <tr>
             <td align="center" nowrap="nowrap"><?php echo _REALESTATE_MANAGER_LABEL_RENT_USER . ':'.$userlist; ?></td>

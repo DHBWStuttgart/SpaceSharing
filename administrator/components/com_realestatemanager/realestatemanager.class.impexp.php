@@ -480,10 +480,6 @@ class mosRealEstateManagerImportExport {
             $house_hlongitude = $house_class->hlongitude = mosRealEstateManagerImportExport::getXMLItemValue($house, 'hlongitude');
             //get map_zoom
             $house_map_zoom = $house_class->map_zoom = mosRealEstateManagerImportExport::getXMLItemValue($house, 'map_zoom');
-            //get bathrooms
-            $house_class->bathrooms = mosRealEstateManagerImportExport::getXMLItemValue($house, 'bathrooms');
-            //get bedrooms
-            $house_class->bedrooms = mosRealEstateManagerImportExport::getXMLItemValue($house, 'bedrooms');
             //get rooms
             $house_class->rooms = mosRealEstateManagerImportExport::getXMLItemValue($house, 'rooms');
             //get contacts
@@ -498,8 +494,6 @@ class mosRealEstateManagerImportExport {
             $house_class->lot_size = mosRealEstateManagerImportExport::getXMLItemValue($house, 'lot_size');
             //get house_size
             $house_class->house_size = mosRealEstateManagerImportExport::getXMLItemValue($house, 'house_size');
-            //get garages
-            $house_class->garages = mosRealEstateManagerImportExport::getXMLItemValue($house, 'garages');
             //get date
             $house_class->date = mosRealEstateManagerImportExport::getXMLItemValue($house, 'date');
             //get hits
@@ -1085,8 +1079,6 @@ static function exportHouses($option) {
             $tmp->hlocation = str_replace($order, ' ', $tmp->hlocation);
             $tmp->agent = str_replace('|', '-', $tmp->agent);
             $tmp->agent = str_replace($order, ' ', $tmp->agent);
-            $tmp->garages = str_replace('|', '-', $tmp->garages);
-            $tmp->garages = str_replace($order, ' ', $tmp->garages);
             $tmp->owneremail = str_replace('|', '-', $tmp->owneremail);
             $tmp->owneremail = str_replace($order, ' ', $tmp->owneremail);
             $tmp->priceunit = str_replace('|', '-', $tmp->priceunit);
@@ -1123,10 +1115,6 @@ static function exportHouses($option) {
             $tmp->associate_house = str_replace($order, ' ', $tmp->associate_house); 
             $tmp->lot_size = str_replace('|', '-', $tmp->lot_size);
             $tmp->lot_size = str_replace($order, ' ', $tmp->lot_size); 
-            $tmp->bathrooms = str_replace('|', '-', $tmp->bathrooms);
-            $tmp->bathrooms = str_replace($order, ' ', $tmp->bathrooms); 
-            $tmp->bedrooms = str_replace('|', '-', $tmp->bedrooms);
-            $tmp->bedrooms = str_replace($order, ' ', $tmp->bedrooms); 
             $tmp->year = str_replace('|', '-', $tmp->year);
             $tmp->year = str_replace($order, ' ', $tmp->year); 
             $tmp->house_size = str_replace('|', '-', $tmp->house_size);

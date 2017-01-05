@@ -749,14 +749,7 @@ if ($realestatemanager_configuration['extra9'] == 1 && $house->extra9 > 0) {
                     <span class="col_text_1"><?php echo _REALESTATE_MANAGER_LABEL_BATHROOMS; ?>:</span>
                     <span class="col_text_2"><?php echo $house->bathrooms; ?></span>
                 </div>
-            <?php } if (isset($house->bedrooms) && trim($house->bedrooms)) { ?>
-                <div class="row_text">
-                    <i class="fa fa-inbox"></i>
-                    <span class="col_text_1"><?php echo _REALESTATE_MANAGER_LABEL_BEDROOMS; ?>:</span>
-                    <span class="col_text_2"><?php echo $house->bedrooms; ?></span>
-                </div>
-                        <?php
-                    }
+            <?php } 
             ?>
             <?php if (isset($house->year) && trim($house->year)) { ?>
                 <div class="row_text">
@@ -1474,4 +1467,3 @@ if ($house->listing_type == 1) {
      
     <a class="rem-close" title="Close" href="#rem-close"></a>
 </div>
-<div class="ordasoft" style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>

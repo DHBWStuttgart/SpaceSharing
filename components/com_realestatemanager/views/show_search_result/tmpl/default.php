@@ -117,8 +117,6 @@ if($layout == "") $layout = "default";
     <input type="hidden" name="City" value="on" />
     <input type="hidden" name="Zipcode" value="on" />
     <input type="hidden" name="ownername" value="on" />
-    <input type="hidden" name="Bathrooms" value="on" />
-    <input type="hidden" name="Bedrooms" value="on" />
     <input type="hidden" name="Contacts" value="on" />
     <input type="hidden" name="Agent" value="on" />
     <input type="hidden" name="Lot_size" value="on" />
@@ -174,15 +172,6 @@ if($layout == "") $layout = "default";
                 <span><?php echo _REALESTATE_MANAGER_LABEL_CATEGORY; ?></span>
                 <?php echo $clist; ?>
             </div>
-
-            <div class="col_box_2">
-                <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_TYPE; ?></span>
-                <?php echo $params->get('listing_type_list'); ?>
-            </div>
-            <div class="col_box_2">
-                <span><?php echo _REALESTATE_MANAGER_LABEL_LISTING_STATUS; ?></span>
-                <?php echo $params->get('listing_status_list'); ?>
-            </div>
         </div>
         
     </div>
@@ -198,4 +187,3 @@ if($layout == "") $layout = "default";
     <div style="clear: both;"></div>
 </form>
 <?php positions_rem($params->get('showsearch04')); ?>
-<div class="ordasoft" style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>  

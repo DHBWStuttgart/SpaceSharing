@@ -6,10 +6,7 @@ $doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/in
 ?>
     <?php positions_rem($params->get('allcategories01')); ?>
 <div class="componentheading<?php echo $params->get('pageclass_sfx'); ?>">
-<?php echo '<h1>' . $currentcat->header . '</h1>';
-
-
-?>
+<?php echo $currentcat->header; ?>
 </div>
 <?php positions_rem($params->get('allcategories02')); ?>
 <table class="basictable table_44" border="0" cellpadding="4" cellspacing="0" width="100%">
@@ -17,9 +14,7 @@ $doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/in
         <td>
 <?php echo $currentcat->descrip; ?>
         </td>     
-        <td width="120" align="center">
-            <img src="./components/com_realestatemanager/images/rem_logo.png" align="right" alt="Real Estate Manager logo"/>
-        </td>
+        
     </tr>
 </table>
 <?php positions_rem($params->get('allcategories03')); ?>
@@ -45,4 +40,4 @@ $doc->addStyleSheet($mosConfig_live_site . '/components/com_realestatemanager/in
         ?>
     </div>
 </form>
-<div class="ordasoft" style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>
+

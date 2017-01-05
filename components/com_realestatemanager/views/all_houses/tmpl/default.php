@@ -208,14 +208,7 @@ if (!$params->get('wrongitemid')) {
                 </div>
             <?php
         }  
-        if (trim($row->bedrooms)) { ?>
-                <div class="row_text">
-                    <i class="fa fa-inbox"></i>
-                    <span class="col_text_1"><?php echo _REALESTATE_MANAGER_LABEL_BEDROOMS; ?>:</span>
-                    <span class="col_text_2"><?php echo $row->bedrooms; ?></span>
-                </div>
-                        <?php
-        }
+        
 ?>
 
                         </div>
@@ -314,4 +307,3 @@ PHP_realestatemanager::showSearchHouses($option, $catid, $option, $layout);
      
     <a class="rem-close" title="Close" href="#rem-close"></a>
 </div>
-<div class="ordasoft" style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>
