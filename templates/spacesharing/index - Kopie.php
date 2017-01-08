@@ -27,7 +27,52 @@ $Mail    = $this->params->get('Mail');
 
 <div class="header">
 		<div id="header" class="container">
+		
+		<div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
+		
+		<!--- ######################################################################## -->
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			  
+			  
+			   
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				  <a href="<?php echo $this->params->get('logo_link') ?>">
+														<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
+													</a>
+				</div>
+			   
+				<div class="collapse navbar-collapse navbar-right bottom-align-text" id="bs-example-navbar-collapse-1">				
+				
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+					
+				</ul>
+				<form id="signin" class="navbar-form navbar-right" role="form">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+						<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
+					</div>
 
+					<div class="input-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+						<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
+					</div>
+
+					<button type="submit" class="btn btn-primary">Login</button>
+				</form>
+				
+			  </div>
+			</nav>
+			
+			<!--- ######################################################################## -->
 		
 		
 
@@ -70,51 +115,23 @@ $Mail    = $this->params->get('Mail');
 												<?php if ($this->countModules('mainmenu')) : ?>
 													<nav class="navigation" role="navigation">
 													
-														
-														
-															<jdoc:include type="modules" name="mainmenu" style="none" />
+														<jdoc:include type="modules" name="mainmenu" style="none" />
 														
 														
 														
-											
-														<ul class="nav navbar-nav navbar-right">
-																		<li class="dropdown">
-																			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-																				<span class="glyphicon glyphicon-user"></span> 
-																				<strong>Nombre</strong>
-																				<span class="glyphicon glyphicon-chevron-down"></span>
-																			</a>
-																			<ul class="dropdown-menu">
-																				<li>
-																					<div class="navbar-login">
-																						<div class="row">
-																							<form id="signin" class="navbar-form navbar-right" role="form">
-																								<div class="input-group col-lg-12">
-																									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-																									<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
-																								</div>
+														<form id="signin" class="navbar-form navbar-right" role="form">
+															<div class="input-group">
+																<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+																<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
+															</div>
 
-																							<div class="input-group col-lg-12">
-																								<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-																								<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
-																							</div>
-																							<div class="col-lg-12">
-																							<button type="submit" class="btn btn-primary">Login</button>
-																							</div>
+															<div class="input-group">
+																<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+																<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
+															</div>
 
-																							
-																							</form>
-																						</div>
-																						
-																						
-																						
-																
-																					</div>
-																				</li>
-																				
-																			</ul>
-																		</li>
-														</ul>
+															<button type="submit" class="btn btn-primary">Login</button>
+														</form>
 													
 													
 													
@@ -132,11 +149,11 @@ $Mail    = $this->params->get('Mail');
 							</div>
 						
 						</div>	
-				   
+				    </div>
 				
 				<?php endif; ?>
 			
-		 
+		</div> 
 		
 		</div> 
 </div>  <!-- header -->
@@ -293,20 +310,8 @@ $Mail    = $this->params->get('Mail');
 			<?php endif; ?>
 	</div>
 </div> <!-- footer2-->
-<script>
 
-// MooTools
-window.addEvent('domready',function() {
-
-    Element.prototype.hide = function() {
-       
-    };
-});
-
-</script>
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 </body>
 
 </html>
