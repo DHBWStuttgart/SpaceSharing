@@ -614,8 +614,9 @@ class HTML_realestatemanager {
                      $cat_all, $params, $tabclass, $Itemid, $deep);
 			 echo "</li>";
             }//end if ($id == $cat_all[$i]->parent_id)
-		echo "</ul>";
+		
         }//end for(...) 
+	 echo "</ul>";
     }
 
   static function add_google_map(&$rows) {

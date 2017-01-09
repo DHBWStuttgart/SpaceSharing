@@ -105,7 +105,7 @@ $Mail    = $this->params->get('Mail');
 </div>  <!-- header -->
 
 
-<div id="wrapper" class="container" >
+<div id="wrapper" class="container-fluid" >
 	
 	<?php if (
 	$this->countModules('roomsearch') || 
@@ -115,12 +115,12 @@ $Mail    = $this->params->get('Mail');
 	:?>
 	<div class="">
 		<div id="column-wrap"> 
-		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 main-left-col ">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 main-left-col ">
 		<h1>Suche</h1>
 			<jdoc:include type="modules" name="roomsearch" style="xhtml" />
 			<jdoc:include type="modules" name="roomsearch_2" style="xhtml" />
 		</div>
-		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 main-right-col ">
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 main-right-col ">
 		<h1>Karte</h1>
 			<jdoc:include type="modules" name="map" style="xhtml" />
 			<jdoc:include type="modules" name="map_2" style="xhtml" />
@@ -131,14 +131,15 @@ $Mail    = $this->params->get('Mail');
 	
 	<div id="globalContent">
 
-		<?php /* if (
-		$this->countModules('ContentTop1') || 
-		$this->countModules('ContentBottom1') || 
-		$this->countModules('ContentTop2') || 
-		$this->countModules('ContentBottom2'))
-		: */ ?>
+		<?php /* if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')): */ ?>
 			<div class="row" style="padding-top:20px">
-				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 ">
+				<?php  
+				if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')):  
+				echo '<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">';
+				else:
+					echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">';
+				endif; 
+				?>
 				
 				<?php echo '<h1>' . 'Raumübersicht'  . "</h1>"; ?>				
 					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />					
@@ -146,13 +147,15 @@ $Mail    = $this->params->get('Mail');
 					<jdoc:include type="component" />					
 					<jdoc:include type="modules" name="ContentBottom1" style="xhtml" />				
 				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
-				<h1>Test</h1> 
+				<?php  
+				if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')):  ?>		
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
+				<h1>Suche</h1> 
 					<jdoc:include type="modules" name="ContentTop2" style="xhtml" />
 					<jdoc:include type="modules" name="ContentBottom2" style="xhtml" />
 				</div>
+				<?php endif; ?>
 			</div>
-		<?php //endif; ?>
 
 	</div> <!--globalContent-->
 
@@ -169,7 +172,7 @@ $Mail    = $this->params->get('Mail');
 		$this->countModules('Footer3') || 
 		$this->countModules('Footer4'))
 		: ?>
-			<div class="container ">
+			<div class="container-fluid ">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test1">
 					<jdoc:include type="modules" name="Footer1" style="xhtml" />
 				</div>
@@ -186,7 +189,7 @@ $Mail    = $this->params->get('Mail');
 		<?php endif; ?>
 
 		
-			<div class="container footer">
+			<div class="container-fluid footer">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 					<div class=" footer-top">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
