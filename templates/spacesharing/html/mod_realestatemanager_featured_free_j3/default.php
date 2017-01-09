@@ -163,11 +163,7 @@ function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Besch
                       "<i class='fa fa-tint'></i> " . _REALESTATE_MANAGER_LABEL_BUILD_YEAR .
                        ': ' ."{$row->year}&nbsp;</div>";
                 }
-                    if (trim($row->bedrooms)) {
-                    echo "<div class='featured_houses_bedrooms featured_houses_inline'>".
-                      "<i class='fa fa-inbox'></i> " . _REALESTATE_MANAGER_LABEL_BEDROOMS .
-                       ': ' ."{$row->bedrooms}&nbsp;</div>";
-                }
+      
                 }
             if ($show_hits == 1){
                 echo "<div class='featured_houses_hits featured_houses_inline'>".
@@ -341,11 +337,7 @@ function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Besch
                       ."<i class='fa fa-tint'></i> " . _REALESTATE_MANAGER_LABEL_BUILD_YEAR . 
                       ': ' ."{$row->year}</div>";
               }
-                  if (trim($row->bedrooms)) {
-                    echo "<div class='featured_houses_bedrooms featured_list_inline '>".
-                      "<i class='fa fa-inbox'></i> " . _REALESTATE_MANAGER_LABEL_BEDROOMS . 
-                      ': ' ."{$row->bedrooms}</div>";
-              }         
+                        
           }
           if ($show_hits == 1){
                   echo "<div class='featured_houses_hits featured_list_inline'>".

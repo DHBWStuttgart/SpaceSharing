@@ -10,12 +10,6 @@ $PLZ      = $this->params->get('PLZ');
 $Ort      = $this->params->get('Ort');
 $Telefon  = $this->params->get('Telefon');
 $Mail    = $this->params->get('Mail');
-
-
-
-
-
-
 ?>
 
 <!doctype html>
@@ -23,27 +17,21 @@ $Mail    = $this->params->get('Mail');
 
 <?php include 'includes/head.php'; ?> 
 
-<body id="page-top" class="index ">
+<body>
 
-<div class="header">
-		<div id="header" class="container">
 
-		
-		
-
+<div class="header container-fluid ">
+		<div id="header" class="">
 				<?php if (
 				$this->countModules('loginarea') || 
 				$this->countModules('mainmenu'))
-				: ?>
-			
+				: ?>			
 				    <div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
-						<div class="row">							
+						<div class="">							
 							<div class="main_menu">	
 								
 								<!--Navigation-->
-								<div id="navigation">
-									
-
+								<div id="navigation">	
 										<div class="navbar navbar-default  " role="navigation">
 											<div class="navbar-header ">
 												<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#targetedestination">
@@ -60,89 +48,64 @@ $Mail    = $this->params->get('Mail');
 												</div>
 											</div>
 											
-											
-												
-											
-												<div class="navbar-collapse collapse navbar-right bottom-align-text  " id="targetedestination">
-												
+												<div class="navbar-collapse collapse navbar-right bottom-align-text  " id="targetedestination">											
 												
 												<jdoc:include type="modules" name="loginarea" style="xhtml" />	
 												<?php if ($this->countModules('mainmenu')) : ?>
 													<nav class="navigation" role="navigation">
-													
-														
 														
 															<jdoc:include type="modules" name="mainmenu" style="none" />
 														
-														
-														
-											
 														<ul class="nav navbar-nav navbar-right">
-																		<li class="dropdown">
-																			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-																				<span class="glyphicon glyphicon-user"></span> 
-																				<strong>Nombre</strong>
-																				<span class="glyphicon glyphicon-chevron-down"></span>
-																			</a>
-																			<ul class="dropdown-menu">
-																				<li>
-																					<div class="navbar-login">
-																						<div class="row">
-																							<form id="signin" class="navbar-form navbar-right" role="form">
-																								<div class="input-group col-lg-12">
-																									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-																									<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
-																								</div>
-
-																							<div class="input-group col-lg-12">
-																								<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-																								<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
-																							</div>
-																							<div class="col-lg-12">
-																							<button type="submit" class="btn btn-primary">Login</button>
-																							</div>
-
-																							
-																							</form>
-																						</div>
-																						
-																						
-																						
-																
+															<li class="dropdown">
+																<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+																	<span class="glyphicon glyphicon-user"></span> 
+																	<strong>Chris</strong>
+																	<span class="glyphicon glyphicon-chevron-down"></span>
+																</a>
+																<ul class="dropdown-menu">
+																	<li>
+																		<div class="navbar-login">
+																			<div class="">
+																				<form id="signin" class="navbar-form navbar-right" role="form">
+																					<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+																						<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
 																					</div>
-																				</li>
+
+																					<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+																						<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
+																					</div>
+																					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																					<button type="submit" class="btn btn-primary">Login</button>
+																					</div>
+
 																				
-																			</ul>
-																		</li>
+																				</form>
+																			</div>																
+																		</div>
+																	</li>																				
+																</ul>
+															</li>
 														</ul>
-													
-													
-													
 													</nav>
 												<?php endif; ?>
-												</div>
-												
+												</div>												
 											</div>
-
-										</div>
-									
+										</div>									
 								</div>
 								<!--Navigation-->
 
-							</div>
-						
-						</div>	
-				   
+							</div>						
+						</div>	 
 				
 				<?php endif; ?>
-			
-		 
-		
 		</div> 
 </div>  <!-- header -->
 
 
-<div id="wrapper" class="container">
+<div id="wrapper" class="container" >
 	
 	<?php if (
 	$this->countModules('roomsearch') || 
@@ -150,7 +113,7 @@ $Mail    = $this->params->get('Mail');
 	$this->countModules('map') || 
 	$this->countModules('map_2')) 
 	:?>
-	<div class="row">
+	<div class="">
 		<div id="column-wrap"> 
 		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 main-left-col ">
 		<h1>Suche</h1>
@@ -162,14 +125,10 @@ $Mail    = $this->params->get('Mail');
 			<jdoc:include type="modules" name="map" style="xhtml" />
 			<jdoc:include type="modules" name="map_2" style="xhtml" />
 		</div>
-		</div>
-		
-		
+		</div>		
 	</div>
 	<?php endif; ?>
 	
-
-
 	<div id="globalContent">
 
 		<?php /* if (
@@ -181,16 +140,11 @@ $Mail    = $this->params->get('Mail');
 			<div class="row" style="padding-top:20px">
 				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 ">
 				
-				<?php echo '<h1>' . 'Raumübersicht'  . "</h1>"; ?>
-			
-				
-					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />
-					
+				<?php echo '<h1>' . 'Raumübersicht'  . "</h1>"; ?>				
+					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />					
 					<jdoc:include type="message" />
-					<jdoc:include type="component" />
-					
-					<jdoc:include type="modules" name="ContentBottom1" style="xhtml" />
-				
+					<jdoc:include type="component" />					
+					<jdoc:include type="modules" name="ContentBottom1" style="xhtml" />				
 				</div>
 				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 ">
 				<h1>Test</h1> 
@@ -206,9 +160,8 @@ $Mail    = $this->params->get('Mail');
 
 
 
-
-<div id="footer1">
-	<div class="container">
+<div id="footer1" class="">
+	
 	
 		<?php if (
 		$this->countModules('Footer1') || 
@@ -216,7 +169,7 @@ $Mail    = $this->params->get('Mail');
 		$this->countModules('Footer3') || 
 		$this->countModules('Footer4'))
 		: ?>
-			<div class="row">
+			<div class="container ">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test1">
 					<jdoc:include type="modules" name="Footer1" style="xhtml" />
 				</div>
@@ -233,7 +186,7 @@ $Mail    = $this->params->get('Mail');
 		<?php endif; ?>
 
 		
-			<div class="row footer">
+			<div class="container footer">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 					<div class=" footer-top">
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
@@ -267,12 +220,12 @@ $Mail    = $this->params->get('Mail');
 					</div>					 
 				</div>
 			</div>		
-	</div>
+	
 </div> <!-- footer1-->
 
-<div id="footer2">
-	<div class="container">
-			<div class="row footer">								
+<div id="footer2" class="">
+	
+			<div class="container footer">								
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  copyright">
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-left">
 						
@@ -291,10 +244,12 @@ $Mail    = $this->params->get('Mail');
 				</div>
 			</div>
 			<?php endif; ?>
-	</div>
+	
 </div> <!-- footer2-->
-<script>
 
+
+
+<script>
 // MooTools
 window.addEvent('domready',function() {
 
@@ -306,6 +261,8 @@ window.addEvent('domready',function() {
 </script>
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
 
 </body>
 
