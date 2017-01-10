@@ -1,24 +1,13 @@
 <?php
 defined( '_JEXEC' ) or die( 'Restricted access' );
-
-// Get Parameter
-$logo     = $this->params->get('logo');
-$ftext    = $this->params->get('ftext');
-$Name     = $this->params->get('Name');
-$SuH      = $this->params->get('SuH');
-$PLZ      = $this->params->get('PLZ');
-$Ort      = $this->params->get('Ort');
-$Telefon  = $this->params->get('Telefon');
-$Mail    = $this->params->get('Mail');
+include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 ?>
 
 <!doctype html>
 <html lang="de">
-
 <?php include 'includes/head.php'; ?> 
 
 <body>
-
 
 <div class="header container-fluid ">
 		<div id="header" class="">
@@ -251,7 +240,25 @@ $Mail    = $this->params->get('Mail');
 </div> <!-- footer2-->
 
 
+<script type="text/javascript">
+if (typeof MooTools != 'undefined') {
+    var mHide = Element.prototype.hide;
+    Element.implement({
+        hide: function() {
+                if (this.hasClass("dropdown")) {
+                    return this;
+                }
+            if (this.hasClass("hasTooltip")) {
+                    return this;
+                }
+                mHide.apply(this, arguments);
+            }
+    });
+}
+</script>
 
+
+<!--
 <script>
 // MooTools
 window.addEvent('domready',function() {
@@ -262,8 +269,7 @@ window.addEvent('domready',function() {
 });
 
 </script>
-<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+-->
 
 
 

@@ -1,34 +1,14 @@
-<?php
-defined('_JEXEC') or die;
-JHtml::_('bootstrap.framework');
-?>
+<?php defined('_JEXEC') or die; ?>
 
 <head>
-        <?php
-      $this->setGenerator('');
-        ?>
-        <jdoc:include type="head" />
-
+     <jdoc:include type="head" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SpaceSharing</title>
-	
-	
-	 <!-- font-awesome  CSS -->
-    <link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/font-awesome/css/font-awesome.css" rel="stylesheet">
-
-    <!-- Bootstrap Core CSS -->
-    <link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Theme CSS 	-->
-    <link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/custom_style.css" rel="stylesheet">
-	<!--
-	<link type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/style.css" rel="stylesheet">
-	-->
+    <title>SpaceSharing</title>	
 	
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
