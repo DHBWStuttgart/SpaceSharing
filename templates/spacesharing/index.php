@@ -162,12 +162,13 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		$this->countModules('Footer4'))
 		: ?>
 			<div class="container-fluid ">
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test1">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test1">
 					<jdoc:include type="modules" name="Footer1" style="xhtml" />
 				</div>
+				<!---
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test2">
 					<jdoc:include type="modules" name="Footer2" style="xhtml" />
-				</div>
+				</div> -->
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test3">
 					<jdoc:include type="modules" name="Footer3" style="xhtml" />
 				</div>
