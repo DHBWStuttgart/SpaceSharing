@@ -7,6 +7,24 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 <html lang="de">
 <?php include 'includes/head.php'; ?> 
 
+<script type="text/javascript">
+   (function($){   
+    $(document).ready(function(){
+     $('.dropdown-toggle').dropdown();
+      // dropdown
+      $('.parent').addClass('dropdown');
+      $('.parent > a').addClass('dropdown-toggle');
+      $('.parent > a').attr('data-toggle', 'dropdown');
+     $('.parent > a').attr('data-target', '#');
+      $('.parent > a').append('<b class="caret"></b>');
+      $('.parent > ul').addClass('dropdown-menu');
+     $('.nav-child .parent').removeClass('dropdown');
+     $('.nav-child .parent .caret').css('display', 'none');
+      $('.nav-child .parent').addClass('dropdown-submenu');
+    });
+  })(jQuery);
+</script>
+
 <body>
 
 <div class="header container-fluid ">
@@ -45,34 +63,24 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 														
 															<jdoc:include type="modules" name="mainmenu" style="none" />
 														
-														<ul class="nav navbar-nav navbar-right">
-															<li class="dropdown">
+														<ul class="nav navbar-nav navbar-right " >
+															<li class="dropdown " >
 																<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 																	<span class="glyphicon glyphicon-user"></span> 
-																	<strong>Chris</strong>
+																	<?php
+																	if (!$user->guest){
+																		echo '<strong>' . $user->get('name') . '</strong>';
+																	}else{
+																		echo '<strong>' . JText::_('JLOGIN') . '</strong>';
+																	}
+																		 
+																	?>
 																	<span class="glyphicon glyphicon-chevron-down"></span>
 																</a>
-																<ul class="dropdown-menu">
+																<ul class="dropdown-menu navbarlogin" style="padding-bottom:20px;">
 																	<li>
 																		<div class="navbar-login">
-																			<div class="">
-																				<form id="signin" class="navbar-form navbar-right" role="form">
-																					<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-																						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-																						<input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
-																					</div>
-
-																					<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-																						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-																						<input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
-																					</div>
-																					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-																					<button type="submit" class="btn btn-primary">Login</button>
-																					</div>
-
-																				
-																				</form>
-																			</div>																
+																			<jdoc:include type="modules" name="Footer1" style="xhtml" />															
 																		</div>
 																	</li>																				
 																</ul>
@@ -256,6 +264,7 @@ if (typeof MooTools != 'undefined') {
             }
     });
 }
+
 </script>
 
 

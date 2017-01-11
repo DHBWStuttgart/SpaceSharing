@@ -9,7 +9,7 @@
 
 defined('_JEXEC') or die;
 
-
+JHtml::_('behavior.keepalive');
 ?>
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-vertical">
 <?php if ($params->get('greeting')) : ?>
@@ -20,17 +20,8 @@ defined('_JEXEC') or die;
 		<?php echo JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('username'), ENT_COMPAT, 'UTF-8')); ?>
 	<?php endif; ?>
 	</div>
-	<ul class="list-unstyled">			
-		<li>
-			<a href="#">Test</a>
-		</li>	
-		<li>
-			<a href="#">Test2</a>
-		</li>		
-	</ul>
-	
 <?php endif; ?>
-	<div class="logout-button" style="padding-top:10px;">
+	<div class="logout-button">
 		<input type="submit" name="Submit" class="btn btn-primary" value="<?php echo JText::_('JLOGOUT'); ?>" />
 		<input type="hidden" name="option" value="com_users" />
 		<input type="hidden" name="task" value="user.logout" />

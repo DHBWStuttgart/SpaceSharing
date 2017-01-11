@@ -9,6 +9,7 @@ $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx');
 $tpath = $this->baseurl.'/templates/'.$this->template;
 $templateparams	= $app->getTemplate(true)->params;
+$user             = JFactory::getUser();
 
 // generator tag
 $this->setGenerator(null);
