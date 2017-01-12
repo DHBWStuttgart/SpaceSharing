@@ -43,7 +43,13 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 		}
 	</script>
 
+
 	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
+
+<div class="table-responsive">
+<table class="table">
+	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well"  enctype="multipart/form-data">
+
 	<?php // Iterate through the form fieldsets and display each one. ?>
 	<?php foreach ($this->form->getFieldsets() as $group => $fieldset) : ?>
 		<?php $fields = $this->form->getFieldset($group); ?>
@@ -61,6 +67,7 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 				<?php if ($field->hidden) : ?>
 					<?php echo $field->input; ?>
 				<?php else : ?>
+
 					<div class="control-group">
 						<div class="control-label">
 							<?php echo $field->label; ?>
@@ -71,6 +78,18 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 						<div class="controls">
 							<?php if ($field->fieldname == 'password1') : ?>
 								<?php // Disables autocomplete ?> <input type="password" style="display:none">
+
+					<div class="control-group form-group">
+						<div class="control-label col-sm-2">
+							<?php echo $field->label; ?>
+							<?php if (!$field->required && $field->type != 'Spacer') : ?>
+								<span class="optional control-label"  ><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span>
+							<?php endif; ?>
+						</div>
+						<div class="controls form-group">
+							<?php if ($field->fieldname == 'password1') : ?>
+								<?php // Disables autocomplete ?> <input class="form-control" type="password" style="display:none">
+
 							<?php endif; ?>
 							<?php echo $field->input; ?>
 						</div>
@@ -139,3 +158,7 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 		<?php echo JHtml::_('form.token'); ?>
 	</form>
 </div>
+
+</table>
+</div>
+
