@@ -266,19 +266,19 @@ function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Besch
         echo "</div>" ;
     }
 
+	
+	// Flaggen-Icon eingefügt
     if ($location == 1){
         echo "<div class='featured_list_location'>".
           "<i class='glyphicon glyphicon-flag'></i> {$row->hlocation}&nbsp;</div>";
     }
     if ($description == 1){
 		
-		
-		
+	
 		$shortedtext = truncate($text); //ruft die truncate funktion auf 
 		echo "<div class='featured_list_description'>{$shortedtext}</div>";        
 		
-		
-	
+
     }
     if ($features == 1 || $categories == 1 || $show_hits == 1 ){
     ?>
@@ -348,7 +348,7 @@ function truncate($string,$length=500,$append="&hellip;") { //begrenzt die Besch
       </div>
 <?php 
     }
-    if ($view_listing == 1){
+    if ($view_listing == 1){ //Button 'Objekt anschauen' formatiert
         echo "<div class='featured_list_viewlisting row col-md-12'><a class='btn btn-warning' role='button' href='".
           JRoute::_($link1, false)."' target='_self'>"
           . _REALESTATE_MANAGER_LABEL_VIEW_LISTING . "</a></div>";
