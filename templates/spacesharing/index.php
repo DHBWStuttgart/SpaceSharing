@@ -27,12 +27,14 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
 <body>
 
+<!--Header-->
 <div class="header container-fluid ">
 		<div id="header" class="">
 				<?php if (
 				$this->countModules('loginarea') || 
 				$this->countModules('mainmenu'))
-				: ?>			
+				: ?>	
+					<!--Hauptmenü im Header-->
 				    <div class="main_menu col-lg-12 col-md-12 col-sm-12 col-xs-12  ">
 						<div class="">							
 							<div class="main_menu">	
@@ -48,6 +50,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 													<span class="icon-bar"></span>
 												</button>
 												
+												<!--Logo mit Verlinkung auf Landing-Page-->
 												<div id="brand">
 													<a href="<?php echo $this->params->get('logo_link') ?>">
 														<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" style="width:200px; height:120px;" />
@@ -56,13 +59,13 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 											</div>
 											
 												<div class="navbar-collapse collapse navbar-right bottom-align-text  " id="targetedestination">											
-												
 												<jdoc:include type="modules" name="loginarea" style="xhtml" />	
 												<?php if ($this->countModules('mainmenu')) : ?>
 													<nav class="navigation" role="navigation">
 														
 															<jdoc:include type="modules" name="mainmenu" style="none" />
 														
+														<!--Benutzermenü - Dropdown-->
 														<ul class="nav navbar-nav navbar-right " >
 															<li class="dropdown " >
 																<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -75,6 +78,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 																	}
 																		 
 																	?>
+																	<!--Login-->
 																	<span class="glyphicon glyphicon-chevron-down"></span>
 																</a>
 																<ul class="dropdown-menu navbarlogin" style="padding-bottom:20px;">
@@ -92,14 +96,12 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 											</div>
 										</div>									
 								</div>
-								<!--Navigation-->
-
 							</div>						
 						</div>	 
 				
 				<?php endif; ?>
 		</div> 
-</div>  <!-- header -->
+</div>
 
 
 <div id="wrapper" class="container-fluid" >
@@ -113,10 +115,12 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 	<div class="">
 		<div id="column-wrap"> 
 		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 main-left-col ">
+		<!--Suchfunktion auf der Landing-Page-->
 		<h1>Suche</h1>
 			<jdoc:include type="modules" name="roomsearch" style="xhtml" />
 			<jdoc:include type="modules" name="roomsearch_2" style="xhtml" />
 		</div>
+		<!--Karte auf der Landing-Page-->
 		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 main-right-col ">
 		<h1>Karte</h1>
 			<jdoc:include type="modules" name="map" style="xhtml" />
@@ -128,7 +132,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 	
 	<div id="globalContent">
 
-		<?php /* if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')): */ ?>
 			<div class="row" style="padding-top:20px">
 				<?php  
 				if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')):  
@@ -158,10 +161,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
 </div> <!--wrapper-->
 
-
-
 <div id="footer1" class="">
-	
 	
 		<?php if (
 		$this->countModules('Footer1') || 
@@ -173,10 +173,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test1">
 					<jdoc:include type="modules" name="Footer1" style="xhtml" />
 				</div>
-				<!---
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test2">
-					<jdoc:include type="modules" name="Footer2" style="xhtml" />
-				</div> -->
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test3">
 					<jdoc:include type="modules" name="Footer3" style="xhtml" />
 				</div>
@@ -186,52 +182,53 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 			</div>
 		<?php endif; ?>
 
-		
+		<!--Footer1-->
 			<div class="container-fluid footer">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 					<div class=" footer-top">
+						<!--Mehr über Spacesharing im Footer-->
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer one">
 							<h3>Mehr über Spacesharing</h3>
 							<p> <?php if ($this->params->get( 'ftext' )) : echo ($ftext); endif; ?></p>
 						</div>
 						
+						<!--Folge uns im Footer mit einem Facebook-Like Button-->
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
 							<h3>Folge uns</h3>
-							<!-- Facebook Like Button https://developers.facebook.com/docs/plugins/like-button -->	
 							<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F&width=450&layout=standard&action=like&size=large&show_faces=false&share=false&height=35&colorscheme=dark&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 						</div>
 						
+						<!--Kontaktinformationen im Footer, Daten sind dynamisch anpassbar über Joomla-->
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer three">
 							<h3>Kontakt Information</h3>
-							
 							<address><span class="glyphicon glyphicon-home"></span>
 							<strong><?php if ($this->params->get( 'Name' )) : echo ($Name); endif; ?></strong><br>
 							<?php if ($this->params->get( 'SuH' )) : echo ($SuH); endif; ?></br>
 							<?php if ($this->params->get( 'PLZ' )) : echo ($PLZ); endif; ?> <?php if ($this->params->get( 'Ort' )) : echo ($Ort); endif; ?> </br>
 							 </address>
-
 							 <?php if ($this->params->get( 'Telefon' )|| $this->params->get( 'Mail' )) : ?><address>
 							  <strong><?php if ($this->params->get( 'Name' )) : echo ($Name); endif; ?></strong><br>
 							  <?php if ($this->params->get( 'Telefon' )) : ?><abbr title="Telefonnummer"><span class="glyphicon glyphicon-phone"></span>Tel.:</abbr> <?php echo ($Telefon); endif; ?> <br>
 							  <?php if ($this->params->get( 'Mail' )) : ?> <span class="glyphicon glyphicon-envelope"></span><a href="mailto:#">  <?php echo ($Mail); endif; ?></a>
 							  </address>
-							<?php endif; ?>
-							
+							<?php endif; ?>		
 						</div>					
 					</div>					 
 				</div>
 			</div>		
 	
-</div> <!-- footer1-->
+</div>
 
+<!--Footer2-->
 <div id="footer2" class="">
-	
+			<!--Copyright Informationen im Footer2-->
 			<div class="container footer">								
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  copyright">
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-left">
 						
 							<div class="footer-modul"><jdoc:include type="modules" name="copyright" style="xhtml" /></div>
 						</div>
+						<!--Footermenü mit Impressum und AGBs-->
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 copyright-right">
 						<jdoc:include type="modules" name="footermenu" style="xhtml" />							
 						</div>					
@@ -245,9 +242,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				</div>
 			</div>
 			<?php endif; ?>
-	
-</div> <!-- footer2-->
-
+</div>
 
 <script type="text/javascript">
 if (typeof MooTools != 'undefined') {
@@ -266,23 +261,5 @@ if (typeof MooTools != 'undefined') {
 }
 
 </script>
-
-
-<!--
-<script>
-// MooTools
-window.addEvent('domready',function() {
-
-    Element.prototype.hide = function() {
-       
-    };
-});
-
-</script>
--->
-
-
-
 </body>
-
 </html>
