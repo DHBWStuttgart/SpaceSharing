@@ -14,35 +14,29 @@ defined('_JEXEC') or die;
 
 JLoader::register('UsersHelperRoute', JPATH_SITE . '/components/com_users/helpers/route.php');
 
-
-
 ?>
-<form id="signin" action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post"  class=" navbar-form " role="form">
+<form id="signin" action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post"  class=" navbar-form form-horizontal" role="form">
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 	<?php if ($params->get('pretext')) : ?>
 		<div class="pretext">
 			<p><?php echo $params->get('pretext'); ?></p>
 		</div>
-	<?php endif; ?>
-	
-		
-		
-			<div class="form-group">
+	<?php endif; ?>	
+
+			<div class="form-group col-sm-12">
 				<div class="input-group">
 					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-					<input id="modlgn-username" type="text" class="form-control" name="username" tabindex="0" size="18" placeholder="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>">                                        
+					<input id="modlgn-username" type="text" class="form-control display-border-box" name="username" tabindex="0"  placeholder="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>">                                        
 				</div>	
 			</div>
 		
 		
-			<div class="form-group">
+			<div class="form-group col-sm-12">
 				<div class="input-group">
 					<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-					<input id="modlgn-passwd" type="password" class="form-control" name="password" tabindex="0" size="18" placeholder="<?php echo JText::_('JGLOBAL_PASSWORD') ?>">                                        
+					<input id="modlgn-passwd" type="password" class="form-control display-border-box" name="password" tabindex="0"  placeholder="<?php echo JText::_('JGLOBAL_PASSWORD') ?>">                                        
 				</div>	
 			</div>	
-		
-			
 
 		<script> 
 		$(function () { //Funktion zum aufrufen eines Tooltips 
@@ -66,17 +60,17 @@ JLoader::register('UsersHelperRoute', JPATH_SITE . '/components/com_users/helper
 		<?php endif; ?>
 	
 </div>	
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:10px;">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="  padding: 0; margin: 0; margin-top:10px;">
 			
 				<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 ">
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs12 ">
 					<div class="checkbox">
 							<label for="modlgn-remember"><input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"> <?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></label>
 					</div>
 				</div>
 				<?php endif; ?>
 				
-				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 ">
 					<button type="submit" class="btn btn-primary" tabindex="0" name="Submit"><?php echo JText::_('JLOGIN') ?></button>
 				</div>
 			

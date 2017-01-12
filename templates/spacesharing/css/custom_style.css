@@ -382,4 +382,9 @@ div.footer-modul a:hover,.copyright-right ul li a:hover,.footer.three ul li a:ho
     font-size: 87px;
 }
 
+.display-border-box{
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+}
 

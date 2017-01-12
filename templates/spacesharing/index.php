@@ -148,13 +148,13 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				
 				<?php  
 				if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')):  
-				echo '<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">';
+				echo '<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">';
 				else:
-					echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">';
+					echo '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">';
 				endif; 
 				?>
 				
-				<?php echo '<h1>' . 'Raumübersicht'  . "</h1>"; ?>				
+							
 					<jdoc:include type="modules" name="ContentTop1" style="xhtml" />					
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />					
