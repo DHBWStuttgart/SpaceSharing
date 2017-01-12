@@ -24,8 +24,8 @@
 	<!-- Definition von Webseiten-Positionen für Joomla-->
 	<positions>
 		<position>mainmenu</position>
-		<position>loginarea</position>
-		<position>loginmenu</position>	
+		<position>usermenu1</position>
+		<position>usermenu2</position>			
 		<position>roomsearch</position>
 		<position>roomsearch_2</position>
 		<position>map</position>

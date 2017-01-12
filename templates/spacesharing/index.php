@@ -31,7 +31,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 <div class="header container-fluid ">
 		<div id="header" class="">
 				<?php if (
-				$this->countModules('loginarea') || 
 				$this->countModules('mainmenu'))
 				: ?>	
 					<!--Hauptmenü im Header-->
@@ -59,7 +58,6 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 											</div>
 											
 												<div class="navbar-collapse collapse navbar-right bottom-align-text  " id="targetedestination">											
-												<jdoc:include type="modules" name="loginarea" style="xhtml" />	
 												<?php if ($this->countModules('mainmenu')) : ?>
 													<nav class="navigation" role="navigation">
 														
@@ -85,9 +83,9 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 																	<li>
 																		<div class="navbar-login">
 																			<?php if (!$user->guest){																			?>
-																			<jdoc:include type="modules" name="loginmenu" style="xhtml" />
+																			<jdoc:include type="modules" name="usermenu1" style="xhtml" />
 																			<?php } ?>
-																			<jdoc:include type="modules" name="Footer1" style="xhtml" />															
+																			<jdoc:include type="modules" name="usermenu2" style="xhtml" />															
 																		</div>
 																	</li>																				
 																</ul>
