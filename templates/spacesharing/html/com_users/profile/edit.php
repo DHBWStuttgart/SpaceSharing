@@ -47,9 +47,9 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 
 	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
 
-=======
+
 <!-- Anordnung der Eingabefelder -->	
->>>>>>> origin/master
+
 <div class="table-responsive">
 <table class="table">
 	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well"  enctype="multipart/form-data">
