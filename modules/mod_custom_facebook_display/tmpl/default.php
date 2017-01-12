@@ -110,4 +110,4 @@ $baseurl = $params->get('facebook_url','null');
 
 </div>
 
-	  <div style="font-size: 9px; color: #808080; font-weight: normal; font-family: tahoma,verdana,arial,sans-serif; line-height: 1.28; text-align: right; direction: ltr;"><a href="https://www.nationalcprassociation.com/" target="_blank" style="color: #808080;" title="nationalcprassociation.com">CPR certification online</a></div>
+	  <div style="font-size: 9px; color: #808080; font-weight: normal; font-family: tahoma,verdana,arial,sans-serif; line-height: 1.28; text-align: right; direction: ltr;"><a class="nolink"></a></div>

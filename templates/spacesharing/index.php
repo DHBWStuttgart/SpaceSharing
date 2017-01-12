@@ -200,8 +200,13 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 						
 						<!--Folge uns im Footer mit einem Facebook-Like Button-->
 						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 footer two">
-							<h3>Folge uns</h3>
+							<h3>Folge uns </h3>
+							
+							<a href="https://de-de.facebook.com/reallabor.spacesharing/" target="_blank"><img src="images/facebook.png" alt="SpaceSharing"/></a>
+
+							<p> </p>
 							<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F&width=450&layout=standard&action=like&size=large&show_faces=false&share=false&height=35&colorscheme=dark&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							 
 						</div>
 						
 						<!--Kontaktinformationen im Footer, Daten sind dynamisch anpassbar über Joomla-->
