@@ -42,13 +42,10 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 			});
 		}
 	</script>
-<<<<<<< HEAD
 
 
-	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well" enctype="multipart/form-data">
 
-<div class="table-responsive">
-<table class="table">
+<table class="table table-responsive">
 	<form id="member-profile" action="<?php echo JRoute::_('index.php?option=com_users&task=profile.save'); ?>" method="post" class="form-validate form-horizontal well"  enctype="multipart/form-data">
 
 	<?php // Iterate through the form fieldsets and display each one. ?>
@@ -67,27 +64,15 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 			<?php // If the field is hidden, just display the input. ?>
 				<?php if ($field->hidden) : ?>
 					<?php echo $field->input; ?>
-				<?php else : ?>
-
-					<div class="control-group">
-						<div class="control-label">
+				<?php else : ?>				
+					<div class="form-group">
+						<div class="col-sm-3">
 							<?php echo $field->label; ?>
 							<?php if (!$field->required && $field->type != 'Spacer') : ?>
-								<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span>
+								<span class="optional control-label "  ><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span>
 							<?php endif; ?>
 						</div>
-						<div class="controls">
-							<?php if ($field->fieldname == 'password1') : ?>
-								<?php // Disables autocomplete ?> <input type="password" style="display:none">
-
-					<div class="control-group form-group">
-						<div class="control-label col-sm-2">
-							<?php echo $field->label; ?>
-							<?php if (!$field->required && $field->type != 'Spacer') : ?>
-								<span class="optional control-label"  ><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span>
-							<?php endif; ?>
-						</div>
-						<div class="controls form-group">
+						<div class="controls form-group col-sm-9">
 							<?php if ($field->fieldname == 'password1') : ?>
 								<?php // Disables autocomplete ?> <input class="form-control" type="password" style="display:none">
 
@@ -105,14 +90,14 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 		<fieldset>
 			<legend><?php echo JText::_('COM_USERS_PROFILE_TWO_FACTOR_AUTH'); ?></legend>
 
-			<div class="control-group">
-				<div class="control-label">
+			<div class="form-group">
+				<div class="col-sm-3">
 					<label id="jform_twofactor_method-lbl" for="jform_twofactor_method" class="hasTooltip"
 						   title="<?php echo '<strong>' . JText::_('COM_USERS_PROFILE_TWOFACTOR_LABEL') . '</strong><br />' . JText::_('COM_USERS_PROFILE_TWOFACTOR_DESC'); ?>">
 						<?php echo JText::_('COM_USERS_PROFILE_TWOFACTOR_LABEL'); ?>
 					</label>
 				</div>
-				<div class="controls">
+				<div class="col-sm-9">
 					<?php echo JHtml::_('select.genericlist', $this->twofactormethods, 'jform[twofactor][method]', array('onchange' => 'Joomla.twoFactorMethodChange()'), 'value', 'text', $this->otpConfig->method, 'jform_twofactor_method', false); ?>
 				</div>
 			</div>
@@ -127,9 +112,6 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 		</fieldset>
 
 		<fieldset>
-			<legend>
-				<?php echo JText::_('COM_USERS_PROFILE_OTEPS'); ?>
-			</legend>
 			<div class="alert alert-info">
 				<?php echo JText::_('COM_USERS_PROFILE_OTEPS_DESC'); ?>
 			</div>
@@ -139,7 +121,7 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 			</div>
 			<?php else : ?>
 			<?php foreach ($this->otpConfig->otep as $otep) : ?>
-			<span class="span3">
+			<span class="col-sm-3">
 				<?php echo substr($otep, 0, 4); ?>-<?php echo substr($otep, 4, 4); ?>-<?php echo substr($otep, 8, 4); ?>-<?php echo substr($otep, 12, 4); ?>
 			</span>
 			<?php endforeach; ?>
@@ -148,8 +130,8 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 		</fieldset>
 	<?php endif; ?>
 
-		<div class="control-group">
-			<div class="controls">
+		<div class="form-group">
+			<div class="col-sm-3">
 				<button type="submit" class="btn btn-primary validate"><span><?php echo JText::_('JSUBMIT'); ?></span></button>
 				<a class="btn" href="<?php echo JRoute::_('index.php?option=com_users&view=profile'); ?>" title="<?php echo JText::_('JCANCEL'); ?>"><?php echo JText::_('JCANCEL'); ?></a>
 				<input type="hidden" name="option" value="com_users" />
@@ -158,7 +140,7 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 		</div>
 		<?php echo JHtml::_('form.token'); ?>
 	</form>
-</div>
+
 
 </table>
 </div>
