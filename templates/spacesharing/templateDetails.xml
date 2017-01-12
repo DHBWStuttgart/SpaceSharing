@@ -11,6 +11,8 @@
 	<description><![CDATA[
 		<p>Created by SpaceSharing Team</a></p>
 	]]></description>
+	
+	<!-- Einbindung externer Dateien -->
 	<files>
 		<folder>css</folder>
 		<folder>html</folder>
@@ -19,6 +21,7 @@
 		<filename>templateDetails.xml</filename>
 	</files>
 	
+	<!-- Definition von Webseiten-Positionen für Joomla-->
 	<positions>
 		<position>mainmenu</position>
 		<position>loginarea</position>
@@ -37,39 +40,28 @@
 		<position>debug</position>
 		<position>copyright</position>	
 		<position>footermenu</position>	
-
-  		
-		
     </positions>
 
+	<!-- Eingabefelder in Joomla zur dynamischen Anpassung von Logo und Footer -->
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
-				
 				<field name="logo" type="media"
 					label="SpaceSharing Logo" description="Logo auswählen" />
-
 				<field name="ftext" type="textarea"
 					label="Footer Text" description="Text" />
-					
 				<field name="Name" type="text"
 					label="Name" description="Name" />
-										
 				<field name="SuH" type="text"
 					label="Straße und Hausnummer" description="Straße und Hausnummer" />
-										
 				<field name="PLZ" type="text"
 					label="PLZ" description="PLZ" />
-					
 				<field name="Ort" type="text"
 					label="Ort" description="Ort" />
-										
 				<field name="Telefon" type="text"
 					label="Telefon" description="Telefon" />
-										
 				<field name="Mail" type="text"
 					label="E-Mail" description="E-Mail" />
-
 			</fieldset>
 		</fields>
 	</config>
