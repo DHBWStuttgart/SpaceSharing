@@ -5,6 +5,7 @@
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+	font-family: Montserrat;
 }
 </style>
 </head>
@@ -20,7 +21,9 @@ table, th, td {
 	//echo "Ihre NutzerID ist die: ".$nutzerID." mit der E-Mail Adresse: ".$nutzerMail;
 	echo "<form method='POST'>";
 	echo "<table style = 'width:100%;'>";
-
+?>
+	<table class="table table-responsive">
+<?php	
 // Der Tabellen Kopf ist Statisch und bleibt daher immer gleich
 	echo "<thead>";
     echo " 	<tr>";
@@ -33,6 +36,7 @@ table, th, td {
 	echo "  <th>Hausgrösse</th>";
     echo " </tr>";
  	echo "  </thead>";
+
 // Der Tabellen Körper ist flexibel und wird hier erzeugt
 	echo "<tbody>";
 
@@ -57,6 +61,8 @@ table, th, td {
 	echo "</form>";
 	//###############################################################################
  ?>
+
+	</table>
 
 
 <?php 
