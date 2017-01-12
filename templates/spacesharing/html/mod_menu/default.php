@@ -16,7 +16,7 @@ if (($tagId = $params->get('tag_id', '')))
 	$id = ' id="' . $tagId . '"';
 }
 
-// The menu class is deprecated. Use nav instead
+// Menü im Header wird durch ID mainmenu die css-Klasse navbar-nav mitgegeben
 ?>
 <ul class="
 <?php 
