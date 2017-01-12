@@ -84,6 +84,9 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 																<ul class="dropdown-menu navbarlogin" style="padding-bottom:20px;">
 																	<li>
 																		<div class="navbar-login">
+																			<?php if (!$user->guest){																			?>
+																			<jdoc:include type="modules" name="loginmenu" style="xhtml" />
+																			<?php } ?>
 																			<jdoc:include type="modules" name="Footer1" style="xhtml" />															
 																		</div>
 																	</li>																				

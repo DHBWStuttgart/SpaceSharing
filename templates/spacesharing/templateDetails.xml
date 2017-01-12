@@ -25,6 +25,7 @@
 	<positions>
 		<position>mainmenu</position>
 		<position>loginarea</position>
+		<position>loginmenu</position>	
 		<position>roomsearch</position>
 		<position>roomsearch_2</position>
 		<position>map</position>

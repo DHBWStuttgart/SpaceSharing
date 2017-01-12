@@ -20,14 +20,6 @@ defined('_JEXEC') or die;
 		<?php echo JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('username'), ENT_COMPAT, 'UTF-8')); ?>
 	<?php endif; ?>
 	</div>
-	<ul class="list-unstyled">			
-		<li>
-			<a href="#">Test</a>
-		</li>	
-		<li>
-			<a href="#">Test2</a>
-		</li>		
-	</ul>
 	
 <?php endif; ?>
 	<div class="logout-button" style="padding-top:10px;">
