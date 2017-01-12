@@ -105,7 +105,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 </div>
 
 
-<div id="wrapper" class="container-fluid" >
+<div id="wrapper" class="container" >
 	
 	<?php if (
 	$this->countModules('roomsearch') || 
