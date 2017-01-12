@@ -134,6 +134,16 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
 			<div class="row" style="padding-top:20px">
 				<?php  
+				if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')):  ?>		
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
+				<h1>Suche</h1> 
+					<jdoc:include type="modules" name="ContentTop2" style="xhtml" />
+					<jdoc:include type="modules" name="ContentBottom2" style="xhtml" />
+				</div>
+				<?php endif; ?>
+				
+				
+				<?php  
 				if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')):  
 				echo '<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">';
 				else:
@@ -147,14 +157,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 					<jdoc:include type="component" />					
 					<jdoc:include type="modules" name="ContentBottom1" style="xhtml" />				
 				</div>
-				<?php  
-				if ($this->countModules('ContentTop2') || 	$this->countModules('ContentBottom2')):  ?>		
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 ">
-				<h1>Suche</h1> 
-					<jdoc:include type="modules" name="ContentTop2" style="xhtml" />
-					<jdoc:include type="modules" name="ContentBottom2" style="xhtml" />
-				</div>
-				<?php endif; ?>
+				
 			</div>
 
 	</div> <!--globalContent-->
