@@ -16,9 +16,7 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
  ?>
  
-
-	
-	<h2></h2>
+<h2></h2>
 <form method="post" class="form-horizontal">
 <div class="form-group">
 	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Titel des Objektes* </label>
@@ -26,8 +24,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	</br>
 </div>
 <div class="form-group">
-		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Kategorie:*
-			<select name="kategorie" style="margin-left: 130%; width: 30vw;" class="form-control">
+		<label style="position: relative; display: inline-block;"  class="control-label col-sm-2"> Kategorie:* </label>
+			<select style="margin-left: 20%; width: 30vw;" name="kategorie" class="form-control">
 				<?php
 					//Hier werden die Kategorien, welche aus der Datenbank ausgelesen wurden, ausgegeben
 					for($i=0; $i<count($funktionsausgabe); $i++){
@@ -35,14 +33,13 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
        				 }
 				?>
 			</select>
-		</label>
 </div>
 	</br>
-	</br>
+		</br>
 <div class="form-group">
 	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Objektbeschreibung* </label>
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<textarea name="beschreibung" style="margin-left: 20%; width: 30vw; height: 30vw;" class="form-control"></textarea>
+		<textarea name="beschreibung" style="margin-left: 20%; width: 30vw; height: 20vw;" class="form-control"></textarea>
 	</br>
 </div>
 	</br>
@@ -93,7 +90,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	</br>
 </div>
 <div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2">Baujahr*</label>
+	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Baujahr* </label>
 	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="baujahr" class="form-control">
 	</br>
 </div>
@@ -109,8 +106,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 </div>
 </br>
 </br>
-<div class="form-group">
-<input type = "submit" name ="submit" value="Absenden" size ="5" style="margin-left: 25%; width: 20vw;" class="form-control btn btn-primary">
+<div class="form-group col-sm-10">
+<input type = "submit" name ="submit" value="Absenden" size ="5" style="margin-left: 20%; width: 25vw;" class="form-control btn btn-primary">
 </br>
 </div>
 </form>
