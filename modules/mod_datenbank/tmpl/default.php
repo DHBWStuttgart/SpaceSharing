@@ -16,100 +16,74 @@
 defined( '_JEXEC' ) or die( 'Restricted access' );
  ?>
  
-<h2></h2>
 <form method="post" class="form-horizontal">
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Titel des Objektes* </label>
-	<input type = "text" size ="5" style="margin-left: 20%;width: 30vw;" name="titel" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-		<label style="position: relative; display: inline-block;"  class="control-label col-sm-2"> Kategorie:* </label>
-			<select style="margin-left: 20%; width: 30vw;" name="kategorie" class="form-control">
-				<?php
-					//Hier werden die Kategorien, welche aus der Datenbank ausgelesen wurden, ausgegeben
-					for($i=0; $i<count($funktionsausgabe); $i++){
-    				echo "<option>".$funktionsausgabe[$i]["name"];"</option>";
-       				 }
-				?>
-			</select>
-</div>
-	</br>
-		</br>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Objektbeschreibung* </label>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<textarea name="beschreibung" style="margin-left: 20%; width: 30vw; height: 20vw;" class="form-control"></textarea>
-	</br>
-</div>
-	</br>
-	</br>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Foto* </label>
-	<input type="file" name=="picture" accept="image/gif, image/jpeg, image/png" style="margin-left: 20%; width: 30vw;" value="Foto auswählen" class="form-control">
-</div>
-	</br>
-	</br>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Mietpreis* </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="mietpreis" class="form-control">
-	</br>
-</div>
-	</br>
-	</br>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Strasse &amp; Hausnummer* </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="strasse" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> PLZ* </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="plz" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Stadt* </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="stadt" class="form-control">
-	</br>
-</div>
-	</br>
-	</br>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> ObjektID* </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="obid" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Objektgrösse* </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="groesse" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Anzahl der Zimmer *</label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="zimmer" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Baujahr* </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="baujahr" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Anbieter </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="anbieter" class="form-control">
-	</br>
-</div>
-<div class="form-group">
-	<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Kontaktdaten </label>
-	<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="kontakt" class="form-control">
-	</br>
-</div>
-</br>
-</br>
-<div class="form-group col-sm-10">
-<input type = "submit" name ="submit" value="Absenden" size ="5" style="margin-left: 20%; width: 25vw;" class="form-control btn btn-primary">
-</br>
-</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Titel des Objektes* </label>
+		<input type = "text" size ="5" style="margin-left: 20%;width: 30vw;" name="titel" class="form-control">
+	</div>
+	<div class="form-group">
+			<label style="position: relative; display: inline-block;"  class="control-label col-sm-2"> Kategorie:* </label>
+				<select style="margin-left: 20%; width: 30vw;" name="kategorie" class="form-control">
+					<?php
+						//Hier werden die Kategorien, welche aus der Datenbank ausgelesen wurden, ausgegeben
+						for($i=0; $i<count($funktionsausgabe); $i++){
+						echo "<option>".$funktionsausgabe[$i]["name"];"</option>";
+						 }
+					?>
+				</select>
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Objektbeschreibung* </label>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<textarea name="beschreibung" style="margin-left: 20%; width: 30vw; height: 20vw;" class="form-control"></textarea>
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Foto* </label>
+		<input type="file" name=="picture" accept="image/gif, image/jpeg, image/png" style="margin-left: 20%; width: 30vw;" value="Foto auswählen" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Mietpreis* </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="mietpreis" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Strasse &amp; Hausnummer* </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="strasse" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> PLZ* </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="plz" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Stadt* </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="stadt" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> ObjektID* </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="obid" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Objektgrösse* </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="groesse" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Anzahl der Zimmer *</label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="zimmer" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Baujahr* </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="baujahr" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Anbieter </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="anbieter" class="form-control">
+	</div>
+	<div class="form-group">
+		<label style="position: relative; display: inline-block;" class="control-label col-sm-2"> Kontaktdaten </label>
+		<input type = "text" size ="5" style="margin-left: 20%; width: 30vw;" name="kontakt" class="form-control">
+	</div>
+	<div class="form-group" style="padding-top:10px;" >
+	<input type = "submit" name ="submit" value="Absenden" size ="5" style="margin-left: 20%; width: 30vw;" class="form-control btn btn-primary">
+	</div>
 </form>
 
 <?php 
