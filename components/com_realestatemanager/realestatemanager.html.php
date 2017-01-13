@@ -106,10 +106,10 @@ class HTML_realestatemanager {
     }
 
     static function showSearchHouses($params, $currentcat, $clist, $option, $layout = "default") {
-        global $mosConfig_absolute_path, $task;
-        $type = $task == "search" ? "show_search_result" : "show_search_house";
+        //global $mosConfig_absolute_path, $task;
+        //$type = $task == "search" ? "show_search_result" : "show_search_house";
         // $type = 'show_search_house';
-        require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
+        //require getLayoutPath::getLayoutPathCom('com_realestatemanager', $type, $layout);
     }
 
     static function displayAllHouses(&$rows, &$params, $tabclass, &$pageNav, $layout = "default") {
