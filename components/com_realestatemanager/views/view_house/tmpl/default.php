@@ -353,7 +353,7 @@ function isValidEmail(str){
     <?php positions_rem($params->get('view01')); ?>
 
 <div class="row-fluid">
-<div class="span9">
+<div class="col-sm-9">
 <div id="rem_house_galery">
 
 <div class="componentheading<?php echo $params->get('pageclass_sfx'); ?> ">
@@ -1044,7 +1044,7 @@ if ($params->get('show_reviews')) {
                             }
                             //editorArea( 'editor1',  $comm_val, 'comment', '410', '200', '60', '10' );
                             ?>
-                        <textarea name="comment" cols="50" rows="8" ><?php echo $comm_val; ?></textarea>
+                        <textarea name="comment" cols="80" rows="5" ><?php echo $comm_val; ?></textarea>
                     </div>
 
                     <!-- #### RATING #### -->
@@ -1223,10 +1223,10 @@ if ($house->listing_type == 1) {
 
 </div>
 
-<div class="span3">
+<div class="col-sm-3">
     <?php 
     if($house->listing_type != 0) {?>
-      <div class="rem_buying_house">
+      <div class="rem_buying_house" style="border: 1px solid #333;">
       <?php
       if ($params->get('show_pricerequest')) {
           ?>              
@@ -1245,7 +1245,7 @@ if ($house->listing_type == 1) {
       } else
           $form_action = "index.php?option=com_realestatemanager&amp;task=save_rent_request&amp;Itemid=" . $Itemid;
 ?>
-      <div id="rem_house_titlebox">
+      <div id="rem_house_titlebox" style="background-color:#333; font-size: 20px;">
           <?php echo _REALESTATE_MANAGER_LABEL_BOOK_NOW ; ?>
       </div>
         <form action="<?php echo sefRelToAbs($form_action); ?>" method="post" name="rent_request_form">  
@@ -1341,7 +1341,7 @@ if ($house->listing_type == 1) {
               && !$params->get('rent_save') && !$params->get('search_request')) {
             ?>
             <br />
-            <input type="button" value="<?php echo _REALESTATE_MANAGER_LABEL_BUTTON_RENT_REQU ; ?>" 
+            <input style="width:80%;" type="button" value="<?php echo _REALESTATE_MANAGER_LABEL_BUTTON_RENT_REQU ; ?>" 
               class="button" onclick="rem_rent_request_submitbutton()" />
             <br />
     <?php
