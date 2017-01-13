@@ -196,7 +196,7 @@ footer .footer-below {
   background:none repeat scroll 0% 0% #333;
   border-top:1px solid #EAEAEA;
   padding:10px 0;
-  margin:40px 0 0 0;
+ /* margin:0 0 0 0; */
 }
 
 #footer2 {

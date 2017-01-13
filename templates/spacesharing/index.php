@@ -105,7 +105,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 </div>
 
 
-<div id="wrapper" class="container" >
+<div id="wrapper" class="<?php if ($breites_layout == 'no'): echo 'container'; else: echo 'container-fluid'; endif; ?>" >
 	
 	<?php if (
 	$this->countModules('roomsearch') || 
@@ -165,7 +165,8 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
 </div> <!--wrapper-->
 
-<div id="footer1" class="">
+<div id="footer1" class="container-fluid">
+	<div class="<?php if ($breites_layout == 'no'): echo 'container'; else: echo 'container-fluid'; endif; ?>">
 	
 		<?php if (
 		$this->countModules('Footer1') || 
@@ -173,7 +174,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		$this->countModules('Footer3') || 
 		$this->countModules('Footer4'))
 		: ?>
-			<div class="container-fluid ">
+			
 				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test1">
 					<jdoc:include type="modules" name="Footer1" style="xhtml" />
 				</div>
@@ -183,11 +184,11 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test4">
 					<jdoc:include type="modules" name="Footer4" style="xhtml" />
 				</div>
-			</div>
+			
 		<?php endif; ?>
 
 		<!--Footer1-->
-			<div class="container-fluid footer">
+			<div class="footer">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
 					<div class=" footer-top">
 						<!--Mehr über Spacesharing im Footer-->
@@ -224,12 +225,13 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 						</div>					
 					</div>					 
 				</div>
-			</div>		
+			</div>	
+	</div>				
 	
 </div>
 
 <!--Footer2-->
-<div id="footer2" class="">
+<div id="footer2">
 			<!--Copyright Informationen im Footer2-->
 			<div class="container footer">								
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  copyright">

@@ -33,5 +33,6 @@ $PLZ      = $this->params->get('PLZ');
 $Ort      = $this->params->get('Ort');
 $Telefon  = $this->params->get('Telefon');
 $Mail     = $this->params->get('Mail');
+$breites_layout = $this->params->get('breites_layout');
 
 ?>

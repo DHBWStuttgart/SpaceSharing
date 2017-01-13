@@ -63,7 +63,20 @@
 					label="Telefon" description="Telefon" />
 				<field name="Mail" type="text"
 					label="E-Mail" description="E-Mail" />
+					
+					
+				<field name="breites_layout" type="radio" class="btn-group" label="Breites Layout verwenden:" default="yes">
+					<option value="yes">ja</option>
+					<option value="no">nein</option>
+				</field>
+			
 			</fieldset>
+			
+			
+
+			
+		
+			
 		</fields>
 	</config>
 
