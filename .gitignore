@@ -217,7 +217,6 @@
 /administrator/language/en-GB/en-GB.xml
 /administrator/language/en-GB/index.html
 /administrator/language/index.html
-/administrator/language/overrides/
 /administrator/manifests/files/index.html
 /administrator/manifests/files/joomla.xml
 /administrator/manifests/index.html
@@ -360,7 +359,6 @@
 /language/en-GB/en-GB.xml
 /language/en-GB/index.html
 /language/index.html
-/language/overrides/
 /layouts/index.html
 /layouts/joomla/index.html
 /layouts/joomla/sidebars/index.html
@@ -478,7 +476,6 @@
 /plugins/user/contactcreator/
 /plugins/user/index.html
 /plugins/user/joomla/
-/plugins/user/profile/
 /README.txt
 /robots.txt
 /templates/beez3/
