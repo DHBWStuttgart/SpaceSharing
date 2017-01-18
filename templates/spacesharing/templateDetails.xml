@@ -2,14 +2,15 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.5" type="template">
 	<name>Spacesharing</name>
-	<creationDate>24 Nov 2016</creationDate>
+	<creationDate>19 Jan 2017</creationDate>
 	<author>SpaceSharing Team</author>
 	<copyright>Copyright © 2016 SpaceSharing Team</copyright>
 	<authorEmail></authorEmail>
-	<authorUrl></authorUrl>
-	<version>Developer 1.0</version>
+	<authorUrl>http://reallaborspacesharing.de/</authorUrl>
+	<version>1.0</version>
 	<description><![CDATA[
-		<p>Created by SpaceSharing Team</a></p>
+		<h1>SpaceSharing Template für Joomla! 3.5</h1>
+		<p>Created by SpaceSharing Team</p>
 	]]></description>
 	
 	<!-- Einbindung externer Dateien -->
@@ -19,6 +20,8 @@
 		<folder>includes</folder>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
 	</files>
 	
 	<!-- Definition von Webseiten-Positionen für Joomla-->
@@ -46,7 +49,7 @@
 	<!-- Eingabefelder in Joomla zur dynamischen Anpassung von Logo und Footer -->
 	<config>
 		<fields name="params">
-			<fieldset name="advanced">
+			<fieldset name="basic">
 				<field name="logo" type="media"
 					label="SpaceSharing Logo" description="Logo auswählen" />
 				<field name="ftext" type="textarea"
@@ -62,21 +65,12 @@
 				<field name="Telefon" type="text"
 					label="Telefon" description="Telefon" />
 				<field name="Mail" type="text"
-					label="E-Mail" description="E-Mail" />
-					
-					
+					label="E-Mail" description="E-Mail" />					
 				<field name="breites_layout" type="radio" class="btn-group" label="Breites Layout verwenden:" default="yes">
 					<option value="yes">ja</option>
 					<option value="no">nein</option>
-				</field>
-			
+				</field>			
 			</fieldset>
-			
-			
-
-			
-		
-			
 		</fields>
 	</config>
 
