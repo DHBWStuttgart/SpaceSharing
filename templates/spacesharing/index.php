@@ -204,7 +204,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 							<a href="https://de-de.facebook.com/reallabor.spacesharing/" target="_blank"><img src="<?php echo $tpath ?>/images/facebook.png" alt="SpaceSharing"/></a>
 
 							<p> </p>
-							<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F&width=450&layout=standard&action=like&size=large&show_faces=false&share=false&height=35&colorscheme=dark&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+							<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Freallabor.spacesharing%2F&width=450&layout=standard&action=like&size=large&show_faces=false&share=false&height=35&colorscheme=dark&appId" width="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 							 
 						</div>
 						
