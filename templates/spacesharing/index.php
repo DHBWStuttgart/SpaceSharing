@@ -175,13 +175,13 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 		$this->countModules('Footer4'))
 		: ?>
 			
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 test1">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 					<jdoc:include type="modules" name="Footer1" style="xhtml" />
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test3">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 					<jdoc:include type="modules" name="Footer3" style="xhtml" />
 				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 test4">
+				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 					<jdoc:include type="modules" name="Footer4" style="xhtml" />
 				</div>
 			
@@ -248,7 +248,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 			
 			<?php if ($this->countModules('debug')): ?>
 			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 test2">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<jdoc:include type="modules" name="debug" style="xhtml" />
 				</div>
 			</div>
