@@ -714,3 +714,4 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+templates/masterbootstrap/offline.php
